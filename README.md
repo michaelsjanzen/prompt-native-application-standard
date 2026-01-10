@@ -28,6 +28,19 @@ Because the book's core thesis is about folding AI into human workflows, it was 
 
 Once that architecture was stable, the code was reverse-engineered into this open-source standard. The goal is to allow any author to publish their own "interactive edition" without needing to reinvent the technical wheel.
 
+## 🤖 Compatibility
+
+This standard creates a generic JSON file (`.json`) compatible with major LLMs.
+
+*(Table updated: Jan 2026)*
+
+| Model | Compatibility | Note |
+| :--- | :--- | :--- |
+| **Claude (Anthropic)** | ⭐⭐⭐⭐⭐ | Excellent. Handles massive files (200k+ tokens) easily. |
+| **Gemini (Google)** | ⭐⭐⭐⭐⭐ | Excellent. Largest context window (1M+ tokens). |
+| **ChatGPT (OpenAI)** | ⭐⭐⭐⭐ | Good, but very large books (>80k words) may hit context limits. |
+| **Local LLMs** | ⭐⭐⭐ | Depends on your local hardware constraints. |
+
 ## Getting Started
 1. **Download** the `templates/book-companion-template.json` file.
 2. **Follow** the instructions in [GUIDE.md](GUIDE.md) to fill it with your content.
