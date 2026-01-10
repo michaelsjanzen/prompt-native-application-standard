@@ -1,19 +1,39 @@
 # The Architect Prompt
 
-**Use this prompt to define the 'Soul' of your application.**
+**Use this prompt to generate your custom file skeleton automatically.**
+
+**Note:** This prompt builds the **Skeleton only**. We do not include the full book text in this step because AI models have limits on how much code they can output at once. You will add your content chapter-by-chapter in the next phase.
 
 ## The Prompt
-Copy and paste the text below into your AI chat:
+1. **Attach** your book manuscript (PDF, Word, MD, etc.).
+2. **Attach** the `templates/book-companion-template.json` file from this repository.
+3. **Copy and paste** the text below into the chat:
 
 ***
 
-"I want to build a Prompt-Native Application (PNA) for my book/course based on the Open Standard. You are the PNA Architect.
+"I want to build a Prompt-Native Application (PNA) for this attached book. You are the PNA Architect.
 
-**Your Goal:** Help me define the metadata and persona for my JSON file.
+**Phase 1: Analysis**
+Please scan the attached **Manuscript** and extract the following metadata:
+* **Title & Author**
+* **Publisher** (if listed)
+* **ISBNs/DOIs** (if listed)
+* **Website/URL** (if listed)
+* **User Goal:** Infer the primary learning objective from the Introduction.
 
-**Step 1:** Ask me the following questions one by one:
-1. What is the Title and Author of the work?
-2. What is the specific 'Persona' the AI should adopt? (e.g., A harsh drill sergeant, a curious tutor, a supportive coach).
-3. What is the primary goal of the reader? (e.g., To memorize facts, to practice a skill, to reflect).
+**Phase 2: The Interview**
+Review the extracted metadata and apply this logic:
+* **If you are missing any metadata:** Do not ask me for it. Just use a placeholder (e.g. `INSERT_PUBLISHER_HERE`) in the final code.
+* **If you found the metadata (or created placeholders):** Proceed immediately to the next step.
 
-**Step 2:** Once I answer, generate the `meta` and `system_boot` JSON blocks for me to paste into my template."
+**The ONLY question you should ask me is about the Persona:**
+* *Example:* 'I've analyzed [Book Title]. How should the AI behave? (e.g., A strict Drill Sergeant, a Socratic Tutor, or an Empathetic Coach?)'
+
+**Phase 3: The Blueprint**
+Once I answer the Persona question, generate the **Full JSON Skeleton** for me.
+* **CRITICAL:** You must strictly follow the structure of the attached **JSON Template**. Do not invent new keys.
+* Fill in the `meta` block with the extracted data.
+* Fill in the `system_boot` block with the Persona instructions.
+* Create the content_modules block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
+
+**Output Format:** Provide the complete JSON code block ready to be saved as `my-book-app.json`."
