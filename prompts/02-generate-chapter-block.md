@@ -3,7 +3,7 @@
 **Use this prompt to turn your raw chapter text into a code block.**
 
 ## Prompt and Instructions
-1. **Copy and paste** the text below into a **new** chat (do not use the Architect chat).
+1. **Copy and paste** the prompt text below into a the same chat.
 2. **Wait** for the AI to ask for your text.
 3. **Open** the `my-book-app.json` file (created by the Architect) in a text editor so you are ready to swap in the content.
 
@@ -16,8 +16,9 @@ Convert the manuscript text I provide into a clean JSON object.
 
 **Instructions:**
 1. Ask me which **Section ID** this is for (e.g., `chapter_1`, `chapter_2`, `introduction`).
-2. Ask me to paste or attach the **Text Content**.
-3. Generate the JSON block strictly following the schema below.
+2. Ask me to paste or attach the **Text Content** if I have not already made that available.
+3. Add linke breaks /n/n to the content where you see paragraphs breaks in the source content.
+4. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
 
 **Required JSON Structure:**
 ```json
@@ -30,4 +31,4 @@ Convert the manuscript text I provide into a clean JSON object.
     "concept 2",
     "concept 3"
   ]
-}
+},
