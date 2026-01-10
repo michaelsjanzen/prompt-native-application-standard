@@ -18,6 +18,7 @@ You might be tempted to ask the AI to "Just generate the whole app for my 50,000
 **2. Save Versions (The "Save As" Habit)**
 * You will be manually pasting large blocks of text. It is easy to accidentally delete a bracket.
 * Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`. If you break v3, you can go back to v2.
+* Continue to save new versions for each step in the editing process and occasionally provide the AI the recent version. The new file names also help the AI from mistaking the latest version from old cached versions.
 
 ### 3. Know Your AI Limits (Context Windows)
 *(Note: Specs reflect the State of the Art as of January 2026. AI models evolve rapidly, so always check your specific model's current limits.)*
