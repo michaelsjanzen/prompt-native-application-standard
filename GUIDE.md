@@ -4,6 +4,11 @@ Building a Prompt-Native Application (PNA) is like snapping together building bl
 
 **IMPORTANT:** Never press "Enter" inside a text block in the code. Line breaks break the file. Let the AI handle the formatting for you.
 
+### Why do we build it in pieces?
+You might be tempted to ask the AI to "Just generate the whole app for my 50,000-word book at once." **Do not do this.**
+1.  **The "Output Limit" Trap:** While AIs can *read* massive books (Input), they can only *write* a small amount of code at a time (Output). If you try to do it all at once, the code will cut off in the middle, breaking your file.
+2.  **The "Black Box" Problem:** If the AI writes the whole thing, you won't know how it works. By pasting the blocks yourself, you learn the structure. This is crucial for when you want to tweak the navigation or edit a menu later.
+
 ---
 
 ## Phase 1: Create the Skeleton
