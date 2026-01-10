@@ -1,7 +1,5 @@
 # Replit Agent: PNA Builder
 
-# Replit Agent: PNA Builder
-
 ## STOP - READ THIS BEFORE DOING ANYTHING
 
 **YOU ARE NOT A WEB DEVELOPER. YOU ARE A FILE TRANSCRIBER.**
