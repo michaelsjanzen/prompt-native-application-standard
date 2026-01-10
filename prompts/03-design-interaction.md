@@ -1,6 +1,6 @@
 # The Interaction Designer Prompt
 
-**Use this prompt to program the "Soul" and "Rules" of your AI.**
+**Use this prompt to program the UX, Navigation, and Personality of your AI.**
 
 ## The Prompt
 1. **Attach** your `my-book-app.json` file.
@@ -8,21 +8,30 @@
 
 ***
 
-"I want to refine the behavior, commands, and personality of my Prompt-Native Application (PNA). You are the Interaction Designer.
+"I want to design the User Experience (UX) and Navigation for my Prompt-Native Application (PNA). You are the Interaction Designer and Strategist.
 
 **Your Goal:**
-Rewrite the `system_boot` section of my JSON file to create a distinct, high-utility user experience.
+Collaborate with me to design the 'Soul' (Persona), the 'Home Screen' (Welcome Message), and the 'Map' (Menu/Navigation).
 
-**Phase 1: The Interview**
-Ask me the following questions (one at a time) to define the design:
-1.  **The Voice:** specific adjectives describing the AI's tone (e.g., 'A warm, encouraging grandmother' vs. 'A cynical, code-obsessed hacker').
-2.  **The Guardrails:** What should the AI *refuse* to do? (e.g., 'Never give the answer, only hints' or 'Never mention competitors').
-3.  **The Toolbelt:** What **Slash Commands** do we need? (e.g., `/quiz` to test the reader, `/summary` to recap a concept, or `/roleplay` to start a simulation).
+**The Workflow:**
+We will do this in 3 steps. Do not skip ahead.
 
-**Phase 2: The Code**
-Based on my answers, generate a fully updated `system_boot` JSON block that includes:
-* `persona`: The detailed personality definition.
-* `commands`: A list of the custom slash commands we defined.
-* `rules`: The restrictive prime directives.
+**Step 1: The Strategy Session**
+Ask me these questions (one by one or grouped) to define our strategy:
+1.  **The Voice:** How should the AI sound? (e.g., 'A strict drill sergeant', 'A supportive peer', 'A wise mentor').
+2.  **The Welcome Experience (Home):** When the user first boots up the app, what should they see? A startling question? A quote? A detailed instruction list? An offer to jump into the content? A fully interactive explanation of how this works?
+3.  **The Navigation (Menu):** How should the user explore? (e.g., 'Slash commands like `/chapter1`', 'A numbered list of topics', or 'Open-ended exploration'?).
+4.  **Guardrails:** What should the AI *refuse* to do?
 
-**Output:** Provide *only* the new `system_boot` block so I can paste it into my file."
+**Step 2: The Text Prototype**
+Based on my answers, draft the **plain text** version of the:
+* **Persona Definition** (System Prompt instructions).
+* **Welcome Message** (The 'Home' screen text).
+* **Main Menu** (The options list).
+* *Wait for my feedback. We will iterate on this text until I am happy.*
+
+**Step 3: The Code Implementation**
+Once I approve the text, convert it into the specific JSON blocks I need to paste into my file.
+* Provide the updated `system_boot` block (containing the persona, rules, and welcome message).
+* Provide the specific `navigation` or `menu` blocks if strictly necessary.
+* **Instruction:** Tell me exactly where to paste these blocks (e.g., 'Replace your existing `system_boot` block with this code')."
