@@ -1,27 +1,33 @@
-# The Chapter Generator Prompt
+# The Generator Prompt
 
-**Use this prompt to convert your text into code.**
+**Use this prompt to turn your raw chapter text into a code block.**
 
-## The Prompt
-Copy and paste the text below into your AI chat:
+## Prompt and Instructions
+1. **Copy and paste** the text below into a **new** chat (do not use the Architect chat).
+2. **Wait** for the AI to ask for your text.
+3. **Open** the `my-book-app.json` file (created by the Architect) in a text editor so you are ready to swap in the content.
 
 ***
 
-"I need to generate the JSON block for **Chapter [X]**.
+"I am building a Prompt-Native Application (PNA) using the 'Surgical Swap' method. I have a JSON skeleton, and now I need to generate the code blocks for the content.
 
-**Input:** [Paste your Chapter Text Here]
+**Your Goal:**
+Convert the manuscript text I provide into a clean JSON object.
 
 **Instructions:**
-1. Take the text I provided.
-2. Format it into a valid JSON object with the key `"chapter_[X]"`.
-3. **CRITICAL:** Escape all double quotes.
-4. **CRITICAL:** Do NOT use a list of strings for the content. Use a single string with `\n\n` to represent paragraph breaks.
-5. Output **only** the code block.
+1. Ask me which **Section ID** this is for (e.g., `chapter_1`, `chapter_2`, `introduction`).
+2. Ask me to paste or attach the **Text Content**.
+3. Generate the JSON block strictly following the schema below.
 
-**Target Output Format:**
+**Required JSON Structure:**
 ```json
-"chapter_1": {
-   "title": "The Beginning",
-   "content": "Paragraph one text.\n\nParagraph two text.",
-   "key_takeaways": ["Point 1", "Point 2"]
+"SECTION_ID_HERE": {
+  "title": "EXTRACT_TITLE_FROM_TEXT",
+  "content": "ESCAPED_TEXT_CONTENT_HERE",
+  "interaction_type": "standard",
+  "key_concepts": [
+    "concept 1",
+    "concept 2",
+    "concept 3"
+  ]
 }
