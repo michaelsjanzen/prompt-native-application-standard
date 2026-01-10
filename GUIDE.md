@@ -9,6 +9,23 @@ You might be tempted to ask the AI to "Just generate the whole app for my 50,000
 1.  **The "Output Limit" Trap:** While AIs can *read* massive books (Input), they can only *write* a small amount of code at a time (Output). If you try to do it all at once, the code will cut off in the middle, breaking your file.
 2.  **The "Black Box" Problem:** If the AI writes the whole thing, you won't know how it works. By pasting the blocks yourself, you learn the structure. This is crucial for when you want to tweak the navigation or edit a menu later.
 
+## Pro Tips for Success
+
+**1. Use a Code Editor, NOT a Word Processor**
+* **Do not** use Microsoft Word, Google Docs, or Notepad to edit your JSON file. They often add "Smart Quotes" (curly quotes) which break code.
+* **Recommended:** Download [VS Code](https://code.visualstudio.com/) (Free) or use Sublime Text. These editors highlight errors (like missing commas) in red so you can fix them instantly.
+
+**2. Save Versions (The "Save As" Habit)**
+* You will be manually pasting large blocks of text. It is easy to accidentally delete a bracket.
+* Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`. If you break v3, you can go back to v2.
+
+### 3. Know Your AI Limits (Context Windows)
+*(Note: Specs reflect the State of the Art as of January 2026. AI models evolve rapidly, so always check your specific model's current limits.)*
+
+* **Gemini 1.5 Pro (2 Million Tokens):** The largest capacity by far. It can hold approximately 1.5 million words (roughly 10–15 full novels) in a single conversation without forgetting details.
+* **Claude 3.5 Sonnet (200k Tokens):** Sufficient for single full manuscripts. It comfortably handles one long novel (up to ~150,000 words) along with your editing instructions.
+* **ChatGPT / GPT-4o (128k Tokens):** **Warning: Too small for a full novel.** Since a 100,000-word book equals roughly 135,000 tokens, it will not fit in a single prompt. You must split the text into chapters or use summaries for this model.
+  
 ---
 
 ## Phase 1: Create the Skeleton
