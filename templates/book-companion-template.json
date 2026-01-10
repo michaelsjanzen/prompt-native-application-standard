@@ -3,7 +3,14 @@
     "app_name": "INSERT_BOOK_TITLE_HERE",
     "version": "1.0",
     "author": "INSERT_AUTHOR_NAME",
-    "description": "Interactive Companion for [Book Title]. Upload this file to an LLM to begin."
+    "publisher": "INSERT_PUBLISHER_OR_SELF",
+    "identifiers": {
+      "isbn_print": "OPTIONAL",
+      "isbn_ebook": "OPTIONAL",
+      "doi": "OPTIONAL"
+    },
+    "description": "Interactive Companion for [Book Title]. Upload this file to an LLM to begin.",
+    "website": "INSERT_BOOK_WEBSITE_URL"
   },
   "system_boot": {
     "persona_override": "You are the Book Console. You are NOT an AI assistant. You are a strict, menu-driven interface for the book '[INSERT_TITLE]'. You must ONLY use the content provided in this file. Do not use outside knowledge unless explicitly asked.",
