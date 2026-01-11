@@ -8,7 +8,7 @@ The **Prompt-Native Application** format was developed to bridge the gap between
 This repository establishes a **Publisher-Agnostic Standard** for bundling what are essentially a "cognitive cartridge" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
 
 ## Prior Art & Acknowledgments
-The PNA standard stands on the shoulders of massive innovation in "Structured Context" engineering. We gratefully acknowledge and align with the following architectural precedents:
+The PNA standard stands on the shoulders of recent innovation in "Structured Context" engineering. We gratefully acknowledge and align with the following architectural precedents:
 * **Microsoft Declarative Agents** & **OpenAI System Fingerprints:** For pioneering the concept of "System Instructions" as a control layer.
 * **Single-File Agents (SFA):** For establishing the utility of lightweight, portable scripts.
 * **JSON Prompting:** For the industry-wide discovery that rigid syntax reduces hallucination.
@@ -23,13 +23,13 @@ While the above standards focus on *Enterprise Automation*, the PNA Standard foc
 
 ## Use Case Examples
 * **The Interactive Book:** Instead of a static digital file, the reader receives an executable file. This allows them to not only read the theory from a book but immediately run the frameworks and tools found in the book with their own data within the an AI chat session. It transforms the author from a narrator into an active consultant.
-* **The Living Corporate Playbook:** An organization evolves its static 50-page "Strategy PDF" or "Employee Handbook" with a PNA. Employees can query the document for specific answers ("What is our policy on AI usage?") or run specific workflows ("Help me draft a project brief using our Q3 Strategic Pillars") ensuring strict alignment with leadership’s intent. The "cognitive cartridge" also helps reduce risk by keeping the content inside one file.
+* **The Living Corporate Playbook:** An organization evolves its static 50-page "Strategy PDF" or "Employee Handbook" with a PNA. Employees can query the document for specific answers ("What is our policy on AI usage?") or run specific workflows ("Help me draft a project brief using our Q3 Strategic Pillars") ensuring strict alignment with leadership’s intent. The "cognitive cartridge" also helps reduce risk by keeping the content inside one easily distributed file.
 * **The Intelligent Course Syllabus:** An educator packages their entire semester’s curriculum—readings, assignments, and grading rubrics—into a single file. The file acts as a 24/7 tutor that can quiz students on specific chapters, guide them through homework assignments using the educator’s specific methodology, and provide feedback before they submit their work. The "walled-garden" also helps focus the students on the curriculum while learning to effectively use AI.
 
 ## Origin & Backstory
 The **Prompt-Native Application** standard was originally developed to publish a single book *Agile Symbiosis: When AI Dissolves Your Job, Design a Better One.*, by Michael Janzen. It's a guide for knowledge workers adapting to the Age of AI Synthesis.
 
-Because the book's core thesis is about folding AI into human workflows, it was logical to use AI itself as the delivery mechanism for the content. The first "cognitive cartridge" was built to prove that a static text could become an active partner in the reader's learning journey.
+Because the book's core thesis is about folding AI into human workflows, it was logical to use AI itself as a delivery mechanism for the content. The first "cognitive cartridge" was built to prove that a static text could become an active partner in the reader's learning journey.
 
 Once that architecture was stable, Michael reverse-engineered the code into this open-source standard. The goal is to empower any author or educator to publish their own "cognitive cartridge" without needing to reinvent the technical wheel.
 
@@ -82,9 +82,18 @@ This standard creates a generic JSON file (`.json`) compatible with major LLMs.
 | **Local LLMs** | ⭐⭐⭐ | Depends on your local hardware constraints. |
 
 ## Getting Started
-1. **Download** the `templates/book-companion-template.json` file.
-2. **Follow** the instructions in [GUIDE.md](GUIDE.md) to fill it with your content.
-3. **Distribute** the file alongside your ebook or course material.
+
+You can build a PNA in two ways. Choose the path that fits your workflow.
+
+### Path 1: The Automated Way (Recommended)
+Use the **Replit Agent** to build the file for you using the AI code tools at Replit.com. You upload your manuscript, and the AI Architect interviews you, writes the code, and assembles the JSON file.
+* **Best for:** Speed, non-coders, and standard books.
+* **Start Here:** [**Automated Build Guide**](GUIDE-REPLIT.md)
+
+### Path 2: The Manual Way
+Build the file yourself using the "Surgical Swap" method. You generate components one by one using standard AI chats (ChatGPT/Claude) and paste them into a template.
+* **Best for:** Precision, privacy (no uploading to Replit), or complex custom structures.
+* **Start Here:** [**Manual Build Guide**](GUIDE.md)
 
 ## License
 This standard is released under the **MIT License**. You are free to build commercial PNAs using this format.
