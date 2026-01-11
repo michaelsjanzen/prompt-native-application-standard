@@ -1,8 +1,9 @@
-# How to Build Your Book Cartridge (The "Surgical Swap" Method)
+# How to Manually Build a Prompt-Native Application (PNA) 
+**(The "Surgical Swap" Method)**
 
 Building a Prompt-Native Application (PNA) is like snapping together building blocks. You don't need to write code; you just need to swap out the generic blocks for your specific content.
 
-**IMPORTANT:** Never press "Enter" inside a text block in the code. Line breaks break the file. Let the AI handle the formatting for you.
+**IMPORTANT:** Never press "Enter" twice inside a text block in the code. Empty lines break the file. Let the AI handle the formatting for you.
 
 ### Why do we build it in pieces?
 You might be tempted to ask the AI to "Just generate the whole app for my 50,000-word book at once." **Do not do this.**
