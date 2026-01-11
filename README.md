@@ -27,7 +27,7 @@ While the above standards focus on *Enterprise Automation*, the PNA Standard foc
 * **The Intelligent Course Syllabus:** An educator packages their entire semester’s curriculum—readings, assignments, and grading rubrics—into a single file. The file acts as a 24/7 tutor that can quiz students on specific chapters, guide them through homework assignments using the educator’s specific methodology, and provide feedback before they submit their work. The "walled-garden" also helps focus the students on the curriculum while learning to effectively use AI.
 
 ## Origin & Backstory
-The **Prompt-Native Application** standard was originally developed to publish a single book *Agile Symbiosis: When AI Dissolves Your Job, Design a Better One.*, by Michael Janzen. It's a guide for knowledge workers adapting to the Age of AI Synthesis.
+The **Prompt-Native Application** standard was originally developed to publish a single book *Agile Symbiosis: When AI Dissolves Your Job, Design a Better One*, by Michael Janzen. It's a guide for knowledge workers adapting to the Age of AI Synthesis.
 
 Because the book's core thesis is about folding AI into human workflows, it was logical to use AI itself as a delivery mechanism for the content. The first "cognitive cartridge" was built to prove that a static text could become an active partner in the reader's learning journey.
 
