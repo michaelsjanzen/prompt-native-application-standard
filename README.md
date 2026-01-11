@@ -53,10 +53,6 @@ How this standard compares to the three dominant AI architectures:
 
 ## Limitations
 
-While powerful, this architecture is constrained by the current physics of Large Language Models:
-
-## Limitations
-
 While powerful, this architecture is constrained by the physics of Large Language Models:
 
 **Context Window Volatility:**
