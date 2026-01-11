@@ -1,9 +1,8 @@
-# GUIDE_REPLIT.md
+# GUIDE-REPLIT.md
 
 ## How to Build a Prompt-Native Application (PNA) with Replit Agent
 
 A Prompt-Native Application (PNA), is a single, portable text file built on Monolithic Context Architecture that bundles Content (a manuscript), Logic (executable tools), and Interface (navigation menus) into a self-contained package. It functions like a digital game cartridge: when uploaded to an LLM, it instantly transforms the general model into a specialized Operating System without requiring servers, installation, or code.
-
 
 ### THE SHORT VERSION:
 1. Drag & Drop your manuscript and the instructions file into Replit.
