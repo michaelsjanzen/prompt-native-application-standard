@@ -1,78 +1,57 @@
-# How to Build a PNA with Replit Agent
+# GUIDE_REPLIT.md
 
-**OBJECTIVE:**
-Use the Replit Agent to convert a manuscript into a **Prompt-Native Application (PNA)**—a single JSON data file.
+## How to Build a PNA with Replit Agent
 
-**CRITICAL WARNING:**
-Replit is designed to build Web Apps. **We are building a Data File.** You must strictly follow the setup below to prevent the Agent from building a website you don't need.
-
----
-
-## STEP 1: THE SETUP (Do this first)
-
-1.  **Create a New Project** in Replit.
-2.  **Upload Your Manuscript** (PDF, DOCX, or MD) to the root folder.
-3.  **Create a New File** named `PNA_BUILDER_INSTRUCTIONS.md`.
-4.  **Paste** the content of the "PNA Master Instructions" into that file.
+### THE SHORT VERSION:
+1. Drag & Drop your manuscript and the instructions file into Replit.
+2. Paste the command below.
+3. Answer the Agent's questions.
 
 ---
 
-## STEP 2: THE WAKE-UP COMMAND
+## STEP 1: PREPARATION
 
-**Copy and paste this EXACT text into the Replit Agent chat window.**
+Before opening Replit, ensure you have these two files on your computer:
 
-> "I have uploaded my manuscript and a file called `PNA_BUILDER_INSTRUCTIONS.md`.
->
-> **CRITICAL INSTRUCTION:**
-> Do not act as a web developer. Read the `PNA_BUILDER_INSTRUCTIONS.md` file immediately. Adopt the **PNA Architect** persona defined inside it.
->
-> Your goal is to generate Data Files (JSON), not an Application.
->
-> Please confirm you have read the instructions and are ready to begin **Phase 1: The Architect**."
+1. **Your Manuscript:** (PDF, DOCX, or MD).
+2. **The System Instructions:** A file named `PNA_INSTRUCTIONS.md` (This is the "Brain" you downloaded from this repo).
 
 ---
 
-## STEP 3: THE PROCESS OVERVIEW
+## STEP 2: THE KICKOFF (The Only Technical Step)
 
-Once the Agent accepts the command, it will guide you through these 6 phases.
+1. Open Replit and click "New Agent" (or Create Project).
+2. Drag and Drop BOTH files (Manuscript + Instructions) into the chat window.
+3. Paste the command below and hit Enter.
 
-### Phase 1: The Architect (Analysis)
-* **What happens:** The Agent scans your book and proposes a "File Manifest" (a list of chapters to build).
-* **Your Job:** Review the list. Ensure every chapter and appendix is listed. If something is missing, tell it: *"You missed Appendix B. Please add it."*
+### 📋 Copy/Paste This Command:
+```plaintext
+I have attached my manuscript and the system instructions (PNA_INSTRUCTIONS.md).
 
-### Phase 2: The Interaction Designer (Interview)
-* **What happens:** The Agent asks you about the "Soul" of the book (Persona) and how the "Home Screen" should look.
-* **Your Job:** Answer the questions. Decide if your Appendices should be interactive tools (e.g., `/tool_name`) or just text.
+CRITICAL INSTRUCTION:
+Do not act as a web developer. Read the attached PNA_INSTRUCTIONS.md file immediately. Adopt the "PNA Architect" persona defined inside it.
 
-### Phase 3: The Generator (Transcription)
-* **What happens:** The Agent writes JSON files to the `pna_components/` folder.
-* **Your Job:**
-    * **Verify Batch 1:** It will stop after Chapter 1. Open the file `pna_components/chapters/01_....json`. Check that the text is **verbatim** and paragraph breaks are `\n\n`.
-    * **Approve:** If it looks good, say *"Approved. Generate the rest."*
+Your goal is to generate Data Files (JSON), not an Application.
 
-### Phase 4: The Assembler (Python Script)
-* **What happens:** The Agent writes a Python script (`build_pna.py`) to merge the components into one valid file.
-* **Your Job:** Watch it run. It should output a file in the `deliverables/` folder.
-
-### Phase 5: The Publisher (Docs)
-* **What happens:** The Agent generates a `README.md` and `LICENSE.txt`.
-* **Your Job:** Review the README to ensure the "Activation Command" is clear.
-
-### Phase 6: The Reviewer (Verification)
-* **What happens:** The Agent builds a simple HTML viewer so you can check your work.
-* **Your Job:** Click "Open in New Tab" to see the viewer.
-    * **Download** the final `.json` file.
-    * **Test** it by uploading it to Claude or ChatGPT.
+Please confirm you have read the instructions and are ready to begin Phase 1.
+```
 
 ---
 
-## TROUBLESHOOTING
+## STEP 3: WHAT HAPPENS NEXT?
 
-**If the Agent starts writing HTML/React code early:**
-* **Say:** "STOP. You are ignoring the `PNA_BUILDER_INSTRUCTIONS.md`. You are a Data Architect, not a Web Developer. Delete the web code and return to Phase 1."
+Once you hit Enter, the AI takes over. You do not need to manage the process; just follow the Agent's lead.
 
-**If the Agent summarizes your text:**
-* **Say:** "STOP. You are summarizing. I need verbatim transcription. Please re-read the 'Generator Logic' in the instructions file."
+Here is a preview of the workflow the Agent will guide you through:
 
-**If the JSON file is broken/invalid:**
-* **Say:** "Do not try to fix the JSON manually. Update the `build_pna.py` script to handle the encoding error and run the script again."
+1. **The Analysis:** The Agent will read your book and show you a list of chapters it plans to build. You just say "Approved."
+2. **The Interview:** The Agent will ask you 3-4 questions about the "Persona" (how the AI should behave) and the "Home Screen."
+3. **The Build:** The Agent will generate the files. It might ask you to check the first one to ensure the formatting looks good.
+4. **The Assembly:** The Agent will write a Python script to merge everything into a final file.
+5. **The Review:** Finally, the Agent will show you a simple "Review Console" where you can download your final `.json` file.
+
+---
+
+## Troubleshooting:
+
+* If the Agent tries to build a website/app immediately, tell it: "STOP. Read the PNA_INSTRUCTIONS.md file again. You are building Data Files, not a Web App."
