@@ -1,11 +1,11 @@
 # The Prompt-Native Application (PNA) Standard
 
-**The Open Standard for Distributing Interactive AI with Books and Educational Materials.**
+**The Open Standard for Distributing Interactive AI Editions of Books and Educational Materials.**
 
 ## Mission
 The **Prompt-Native Application** format was developed to bridge the gap between static literature and active cognitive engagement. While Large Language Models (LLMs) provide the reasoning engine, authors and educators lack a standardized, portable method to distribute "interactive exercises" that travel with their content.
 
-This repository establishes a **Publisher-Agnostic Standard** for bundling "Cognitive Cartridges" (JSON files) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
+This repository establishes a **Publisher-Agnostic Standard** for bundling what are essentially a "cognitive cartridge" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
 
 ## Prior Art & Acknowledgments
 The PNA standard stands on the shoulders of massive innovation in "Structured Context" engineering. We gratefully acknowledge and align with the following architectural precedents:
@@ -21,12 +21,56 @@ While the above standards focus on *Enterprise Automation*, the PNA Standard foc
 * **Corporate Trainers:** Distribute "Scenario Simulators" for sales objection handling, leadership role-play, or AI adoption workflows without needing a Learning Management System (LMS).
 * **University Educators:** Share a "Socratic Tutor" file that forces the AI to ask students questions rather than giving answers.
 
+## Use Case Examples
+* **The Interactive Book:** Instead of a static digital file, the reader receives an executable file. This allows them to not only read the theory from a book but immediately run the frameworks and tools found in the book with their own data within the an AI chat session. It transforms the author from a narrator into an active consultant.
+* **The Living Corporate Playbook:** An organization evolves its static 50-page "Strategy PDF" or "Employee Handbook" with a PNA. Employees can query the document for specific answers ("What is our policy on AI usage?") or run specific workflows ("Help me draft a project brief using our Q3 Strategic Pillars") ensuring strict alignment with leadership’s intent. The "cognitive cartridge" also helps reduce risk by keeping the content inside one file.
+* **The Intelligent Course Syllabus:** An educator packages their entire semester’s curriculum—readings, assignments, and grading rubrics—into a single file. The file acts as a 24/7 tutor that can quiz students on specific chapters, guide them through homework assignments using the educator’s specific methodology, and provide feedback before they submit their work. The "walled-garden" also helps focus the students on the curriculum while learning to effectively use AI.
+
 ## Origin & Backstory
-The **Prompt-Native Application** standard was originally developed to publish *Agile Symbiosis*, a guide for knowledge workers adapting to the AI era.
+The **Prompt-Native Application** standard was originally developed to publish a single book *Agile Symbiosis: When AI Dissolves Your Job, Design a Better One.*, by Michael Janzen. It's a guide for knowledge workers adapting to the Age of AI Synthesis.
 
-Because the book's core thesis is about folding AI into human workflows, it was logical to use AI itself as the delivery mechanism for the content. The first "Book Cartridge" was built to prove that a static text could become an active partner in the reader's learning journey.
+Because the book's core thesis is about folding AI into human workflows, it was logical to use AI itself as the delivery mechanism for the content. The first "cognitive cartridge" was built to prove that a static text could become an active partner in the reader's learning journey.
 
-Once that architecture was stable, the code was reverse-engineered into this open-source standard. The goal is to allow any author to publish their own "interactive edition" without needing to reinvent the technical wheel.
+Once that architecture was stable, Michael reverse-engineered the code into this open-source standard. The goal is to empower any author or educator to publish their own "cognitive cartridge" without needing to reinvent the technical wheel.
+
+## Architecture
+
+The PNA standard utilizes a **Monolithic Context Architecture (MCA)**. Unlike traditional software that relies on a complex stack of databases and servers, a PNA bundles the Logic (Tools), Content (Knowledge Base), and Interface (Menu System) into a single, portable JSON file.
+
+Technically, this is a form of Bootstrapped CAG (Cache-Augmented Generation).
+* **Traditional RAG:** Searches for relevant pages in a database and sends only those pages to the AI.
+* **PNA (CAG):** "Pre-loads" the entire book into the AI's active RAM (Context Window). This allows the model to "think" with the whole book in mind, rather than just a few retrieved snippets.
+
+### Comparative Analysis
+How this standard compares to the three dominant AI architectures:
+
+| Feature | **PNA / CAG (This Standard)** | **Standard RAG (Vector Search)** | **GraphRAG (Knowledge Graph)** |
+| :--- | :--- | :--- | :--- |
+| **Core Concept** | **Memory:** The model loads the full "Monolithic Context" into active RAM. | **Search:** The model looks up keywords in a database ("Disk"). | **Map:** The model navigates a web of relationships (Nodes/Edges). |
+| **Retrieval** | **Instant:** No search step. The model "sees" the entire "knowledge base" simultaneously via attention. | **Similarity:** Retrieves chunks that *sound* like the query (Vector Math). | **Relational:** Retrieves chunks that are *connected* to the query. |
+| **Reasoning** | **Holistic:** Best for "synthesize the themes of the whole book" or connecting distant ideas. | **Fragmented:** Good for finding specific facts, but misses the "big picture". | **Structured:** Excellent for complex multi-hop reasoning (e.g., "How does A affect B?"). |
+| **Infrastructure** | **Zero-Dependency:** Runs in a chat window. No servers, APIs, or Python required. | **High-Dependency:** Requires hosting, vector databases (Pinecone/Milvus), and embedding models. | **Heavy-Dependency:** Requires Graph DBs (Neo4j) and complex pre-processing. |
+
+## Limitations
+
+While powerful, this architecture is constrained by the current physics of Large Language Models:
+
+## Limitations
+
+While powerful, this architecture is constrained by the physics of Large Language Models:
+
+**Context Window Volatility:**
+This standard requires an LLM with a large context window (128k+ tokens). As of January 2026, it works flawlessly on frontier models like **Gemini 1.5 Pro** and **Claude 3.5 Sonnet**, but may struggle on smaller models (e.g., GPT-4o Mini), which can "forget" early chapters if the conversation exceeds their limit.
+
+**The "Lost in the Middle" Phenomenon:**
+In extremely long sessions, models sometimes prioritize information at the very beginning (System Prompt) and the very end (Latest User Query), occasionally blurring details in the middle of the `knowledge_base`.
+*Mitigation: The PNA standard includes "re-grounding" instructions in every tool to remind the model of its source data.*
+
+**Ephemeral State:**
+The "State Machine" is simulated within the chat session. If the user closes the chat window or starts a new thread, the "OS" shuts down and all user data is lost. It does not have a persistent database.
+
+**Hallucination Risk:**
+While the standard uses a "Walled Garden" instruction block to forbid outside knowledge, the underlying model can still occasionally hallucinate facts if the user explicitly pushes it off-rails.
 
 ## 🤖 Compatibility
 
