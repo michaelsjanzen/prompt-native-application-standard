@@ -8,6 +8,7 @@ A Prompt-Native Application (PNA), is a single, portable text file built on Mono
 1. Drag & Drop your manuscript and the instructions file into Replit.
 2. Paste the command below.
 3. Answer the Agent's questions.
+4. Watch the video: https://youtu.be/Pb803p87O20
 
 ---
 
