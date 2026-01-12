@@ -8,7 +8,8 @@
 
 ***
 
-"I have attached my Prompt-Native Application (PNA) JSON file. I need you to perform a Quality Assurance (QA) check.
+```text
+I have attached my Prompt-Native Application (PNA) JSON file. I need you to perform a Quality Assurance (QA) check.
 
 **Your Goal:**
 Validate that my JSON file is syntactically correct and ready for distribution.
@@ -22,4 +23,5 @@ Validate that my JSON file is syntactically correct and ready for distribution.
 
 **Output:**
 * If the file is **Valid**: Reply with 'PASSED: Your PNA file is valid and ready.'
-* If there are **Errors**: List the specific errors and their location, then provide the **corrected code block** for the broken section only."
+* If there are **Errors**: List the specific errors and their location, then provide the **corrected code block** for the broken section only.
+```
