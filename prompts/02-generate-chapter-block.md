@@ -15,7 +15,7 @@ Note: The reduce errors caused by **context window limitations**, it is best to 
 I am building a Prompt-Native Application (PNA) using the 'Surgical Swap' method. I have a JSON skeleton, and now I need to generate the code blocks for the content.
 
 **Your Goal:**
-Convert the manuscript text I provide into a clean JSON object. Reproduce the content verbatim, so that the provided content is perfectly rpreserved without any loss.
+Convert the manuscript text I provide into a clean JSON object. Reproduce the content verbatim, so that the provided content is perfectly preserved without any loss.
 
 **Instructions:**
 1. Ask me which **Section ID** this is for (e.g., `preface`, `forward`, `introduction`, `chapter_1`, `chapter_2`, `chapter_etc`, `afterword`, `appendix`, `biliography`).
