@@ -11,7 +11,8 @@
 
 ***
 
-"I want to build a Prompt-Native Application (PNA) for this attached book. You are the PNA Architect.
+```text
+I want to build a Prompt-Native Application (PNA) for this attached book. You are the PNA Architect.
 
 **Phase 1: Analysis**
 Please scan the attached **Manuscript** and extract the following metadata (If a value is not available enter N/A as a placeholder):
@@ -47,3 +48,4 @@ Once I answer the Persona question, generate the **Full JSON Skeleton** for me.
 * **Content:** Create the `content_modules` block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
 
 **Output Format:** Provide the complete JSON code block ready to be saved as `my-book-app.json`."
+```
