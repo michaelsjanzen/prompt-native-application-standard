@@ -1,6 +1,8 @@
 # The Generator Prompt
 
-**Use this prompt to turn your raw chapter text into a code block. If your content blocks (chapters) are large use an AI with a large context window, like Gemini.**
+**Use this prompt to turn your raw chapter text into a code block.** 
+
+Note: If your content blocks (chapters) are very large use an AI with a large context window, like Gemini. If the AI has trouble building the blocks you may have discovered the AI's limits. In this case ask the AI to 'chunk the chapter content into sections to complete the task of building a chopter block in managable steps.'
 
 ## Prompt and Instructions
 1. **Copy and paste** the prompt text below into a the same chat.
