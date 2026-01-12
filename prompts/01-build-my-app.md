@@ -47,5 +47,5 @@ Once I answer the Persona question, generate the **Full JSON Skeleton** for me.
       4. `[/]` Commands
 * **Content:** Create the `content_modules` block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
 
-**Output Format:** Provide the complete JSON code block ready to be saved as `my-book-app.json`."
+**Output Format:** Provide the complete JSON code block ready to be saved as `my-book-app.json`.
 ```
