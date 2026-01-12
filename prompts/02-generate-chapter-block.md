@@ -12,7 +12,7 @@
 "I am building a Prompt-Native Application (PNA) using the 'Surgical Swap' method. I have a JSON skeleton, and now I need to generate the code blocks for the content.
 
 **Your Goal:**
-Convert the manuscript text I provide into a clean JSON object.
+Convert the manuscript text I provide into a clean JSON object. Reproduce the content in the provided manuscript or chapter excerpt perfectly without the loss of any content. Use the original content verbatim.
 
 **Instructions:**
 1. Ask me which **Section ID** this is for (e.g., `chapter_1`, `chapter_2`, `introduction`).
