@@ -1,6 +1,6 @@
 # The Generator Prompt
 
-**Use this prompt to turn your raw chapter text into a code block.**
+**Use this prompt to turn your raw chapter text into a code block. If your content blocks (chapters) are large use an AI with a large context window, like Gemini.**
 
 ## Prompt and Instructions
 1. **Copy and paste** the prompt text below into a the same chat.
