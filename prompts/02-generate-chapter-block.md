@@ -17,7 +17,7 @@ Convert the manuscript text I provide into a clean JSON object.
 **Instructions:**
 1. Ask me which **Section ID** this is for (e.g., `chapter_1`, `chapter_2`, `introduction`).
 2. Ask me to paste or attach the **Text Content** if I have not already made that available.
-3. Add linke breaks /n/n to the content where you see paragraphs breaks in the source content.
+3. Add line breaks /n/n to the content where you see paragraphs breaks in the source content.
 4. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
 5. If you believe this is the very last section of the content source, ask the human if this is true and STOP and wait for their response.
 6. If this is the last section, do not include the comma at the end of the block.
