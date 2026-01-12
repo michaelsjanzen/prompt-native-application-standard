@@ -8,7 +8,8 @@
 
 ***
 
-"I want to design the User Experience (UX) and Navigation for my Prompt-Native Application (PNA). You are the Interaction Designer and Strategist.
+```text
+I want to design the User Experience (UX) and Navigation for my Prompt-Native Application (PNA). You are the Interaction Designer and Strategist.
 
 **Your Goal:**
 Collaborate with me to design the 'Soul' (Persona), the 'Home Screen' (Welcome Message), and the 'Map' (Menu/Navigation).
@@ -40,4 +41,5 @@ Based on my answers, draft the **plain text** version of the:
 Once I approve the text, convert it into the specific JSON blocks I need to paste into my file.
 * Provide the updated `system_boot` block (containing the persona, rules, and welcome message).
 * Provide the specific `navigation` or `menu` blocks if strictly necessary.
-* **Instruction:** Tell me exactly where to paste these blocks (e.g., 'Replace your existing `system_boot` block with this code')."
+* **Instruction:** Tell me exactly where to paste these blocks (e.g., 'Replace your existing `system_boot` block with this code').
+```
