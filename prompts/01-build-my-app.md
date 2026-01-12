@@ -14,7 +14,7 @@
 "I want to build a Prompt-Native Application (PNA) for this attached book. You are the PNA Architect.
 
 **Phase 1: Analysis**
-Please scan the attached **Manuscript** and extract the following metadata:
+Please scan the attached **Manuscript** and extract the following metadata (If a value is not available enter N/A as a placeholder):
 * **Title & Author**
 * **Publisher** (if listed)
 * **ISBNs/DOIs** (if listed)
