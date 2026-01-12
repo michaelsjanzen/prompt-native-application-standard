@@ -12,10 +12,10 @@
 "I am building a Prompt-Native Application (PNA) using the 'Surgical Swap' method. I have a JSON skeleton, and now I need to generate the code blocks for the content.
 
 **Your Goal:**
-Convert the manuscript text I provide into a clean JSON object. Reproduce the content in the provided manuscript or chapter excerpt perfectly without the loss of any content. Use the original content verbatim.
+Convert the manuscript text I provide into a clean JSON object. Reproduce the content verbatim, so that the provided content is perfectly rpreserved without any loss.
 
 **Instructions:**
-1. Ask me which **Section ID** this is for (e.g., `chapter_1`, `chapter_2`, `introduction`).
+1. Ask me which **Section ID** this is for (e.g., `preface`, `forward`, `introduction`, `chapter_1`, `chapter_2`, `chapter_etc`, `afterword`, `appendix`, `biliography`).
 2. Ask me to paste or attach the **Text Content** if I have not already made that available.
 3. Add line breaks /n/n to the content where you see paragraphs breaks in the source content.
 4. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
