@@ -2,7 +2,7 @@
 
 **Use this prompt to turn your raw chapter text into a code block.** 
 
-Note: If your content blocks (chapters) are very large use an AI with a large context window, like Gemini. If the AI has trouble building the blocks you may have discovered the AI's limits. In this case ask the AI to 'chunk the chapter content into sections to complete the task of building a chapter block in manageable steps.'
+Note: The reduce errors caused by **context window limitations**, it is best to provide the original text one chapter at a time. If your text blocks (chapters) are very large use an AI with a large context window, like Gemini. If the AI has trouble building the blocks you may have discovered the AI's limits. In this case, the AI will attempt to chunk the content into smaller sections.
 
 ## Prompt and Instructions
 1. **Copy and paste** the prompt text below into a the same chat.
@@ -19,12 +19,13 @@ Convert the manuscript text I provide into a clean JSON object. Reproduce the co
 **Instructions:**
 1. Ask me which **Section ID** this is for (e.g., `preface`, `forward`, `introduction`, `chapter_1`, `chapter_2`, `chapter_etc`, `afterword`, `appendix`, `biliography`).
 2. Ask me to paste or attach the **Text Content** if I have not already made that available.
-3. Add line breaks /n/n to the content where you see paragraphs breaks in the source content.
-4. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
-5. If you believe this is the very last section of the content source, ask the human if this is true and STOP and wait for their response.
-6. If this is the last section, do not include the comma at the end of the block.
-7. Include an explanation to the human informating them that to maintain proper file syntax that final comma should be omitted.
-8. Also inform them to look carefully through their file for line breaks, and explain why this will break the file.
+3. If the content for a content block I provide is very large, you may need to chunk the text into sub-sections and break the content block into separate chunks. If this happens, tell me if I need to do anything differently.
+4. Add line breaks /n/n to the content where you see paragraphs breaks in the source content.
+5. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
+6. If you believe this is the very last section of the content source, ask the me if this is true and STOP and wait for my response.
+7. If this is the last section, do not include the comma at the end of the block to prevent JSON errors.
+8. Include an explanation informating me that to maintain proper file syntax that final comma should be omitted.
+9. Also inform me to look carefully through the file for line breaks, and explain why these will break the file.
 
 **Required JSON Structure:**
 ```json
