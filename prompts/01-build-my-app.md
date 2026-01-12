@@ -2,7 +2,7 @@
 
 **Use this prompt to generate your custom file skeleton automatically.**
 
-**Note:** This prompt builds the **Skeleton only**. We do not include the full book text in this step because AI models have limits on how much code they can output at once. You will add your content chapter-by-chapter in the next phase.
+**Note:** This prompt builds the **Skeleton only**. The full book text is not included in this step because AI models have limits on how much output they can produce at once. You will add your content chapter-by-chapter in the next phase.
 
 ## The Prompt
 1. **Attach** your book manuscript (PDF, Word, MD, etc.).
@@ -32,6 +32,7 @@ Review the extracted metadata and apply this logic:
 **Phase 3: The Blueprint**
 Once I answer the Persona question, generate the **Full JSON Skeleton** for me.
 * **CRITICAL:** You must strictly follow the structure of the attached **JSON Template**. Do not invent new keys.
+* Analyze the the book's sections carefully and formulate a plan for breaking it down into managable chunks (normally this is done at the chapter level). If you discover a section/chapter is very large break that section into sub-sections and inform the me about this nuance so I understand why a section/chapter has been broken into smaller parts in the skeleton file.
 * Fill in the `meta` block with the extracted data.
 * Fill in the `system_boot` block with the Persona instructions.
 * Create the content_modules block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
