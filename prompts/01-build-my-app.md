@@ -1,4 +1,4 @@
-# The Architect Prompt
+# The Architect Prompt (v2.0)
 
 **Use this prompt to generate your custom file skeleton automatically.**
 
@@ -32,9 +32,18 @@ Review the extracted metadata and apply this logic:
 **Phase 3: The Blueprint**
 Once I answer the Persona question, generate the **Full JSON Skeleton** for me.
 * **CRITICAL:** You must strictly follow the structure of the attached **JSON Template**. Do not invent new keys.
-* Analyze the the book's sections carefully and formulate a plan for breaking it down into managable chunks (normally this is done at the chapter level). If you discover a section/chapter is very large break that section into sub-sections and inform the me about this nuance so I understand why a section/chapter has been broken into smaller parts in the skeleton file.
-* Fill in the `meta` block with the extracted data.
-* Fill in the `system_boot` block with the Persona instructions.
-* Create the content_modules block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
+* **Structure Analysis:** Analyze the book's sections carefully. If a chapter is very large, break it into sub-sections (e.g., `ch1_part1`, `ch1_part2`) and inform me about this nuance.
+* **Meta:** Fill in the `meta` block with the extracted data.
+* **System Boot (Standardized):**
+    * In the `system_boot` block, insert the Persona instructions we agreed upon.
+    * **MANDATORY:** Add a `formatting_rule` that explicitly states: *"Always use bracketed keys (e.g., [A], [1]) for user options."*
+    * **MANDATORY:** Add an `operational_rule` for slash commands: *"Support standard commands like `/quiz` (generate a question), `/toc` (table of contents), and `/help` (list commands)."*
+* **Navigation (Standardized):**
+    * Pre-fill the `standard_navigation` block with these exact options:
+      1. `[M]` Main Menu
+      2. `[N]` Next Section
+      3. `[?]` Quiz Me
+      4. `[/]` Commands
+* **Content:** Create the `content_modules` block with empty placeholders corresponding to the chapters found in the manuscript (I will fill the content in later).
 
 **Output Format:** Provide the complete JSON code block ready to be saved as `my-book-app.json`."
