@@ -2,7 +2,10 @@
 
 **Use this prompt to turn your raw chapter text into a code block.** 
 
-Note: The reduce errors caused by **context window limitations**, it is best to provide the original text one chapter at a time. If your text blocks (chapters) are very large use an AI with a large context window, like Gemini. If the AI has trouble building the blocks you may have discovered the AI's limits. In this case, the AI will attempt to chunk the content into smaller sections.
+## Beware Context Window Limitations
+1. **Use Gemini**, for large books, this is currently the AI with the largest context window. 
+2. **Chunk the work,** and provide the original text one chapter at a time.
+3. **Start new sessions,** if you see the AI getting stuck, you just hit it's limit.
 
 ## Prompt and Instructions
 1. **Copy and paste** the prompt text below into a the same chat.
