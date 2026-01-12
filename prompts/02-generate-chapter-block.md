@@ -29,7 +29,6 @@ Convert the manuscript text I provide into a clean JSON object. Reproduce the co
 9. Also inform me to look carefully through the file for line breaks, and explain why these will break the file.
 
 **Required JSON Structure:**
-```json
 "SECTION_ID_HERE": {
   "title": "EXTRACT_TITLE_FROM_TEXT",
   "content": "ESCAPED_TEXT_CONTENT_HERE",
