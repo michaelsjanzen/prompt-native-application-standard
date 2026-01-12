@@ -8,7 +8,8 @@
 
 ***
 
-"I am ready to publish my Prompt-Native Application (PNA). I need you to write the `READ_ME_FIRST.txt` file that I will include in the download for my readers.
+```text
+I am ready to publish my Prompt-Native Application (PNA). I need you to write the `READ_ME_FIRST.txt` file that I will include in the download for my readers.
 
 **Your Goal:**
 Read the attached JSON file (specifically `meta`, `system_boot`, and `content_modules`) and write a clear, exciting User Guide.
@@ -28,4 +29,5 @@ Read the attached JSON file (specifically `meta`, `system_boot`, and `content_mo
     * **Default to:** 'Copyright [Year]. All Rights Reserved. For personal use only.' (Unless the file metadata explicitly says 'Creative Commons' or 'Open Source').
 
 **Tone:** Professional, encouraging, and exciting.
-**Format:** Markdown (optimized for a text file)."
+**Format:** Markdown (optimized for a text file).
+```
