@@ -3,9 +3,9 @@
 **The Open Standard for Distributing Interactive AI Editions of Books and Educational Materials.**
 
 ## Mission
-The **Prompt-Native Application** format was developed to bridge the gap between static literature and active cognitive engagement. While Large Language Models (LLMs) provide the reasoning engine, authors and educators lack a standardized, portable method to distribute "interactive exercises" that travel with their content.
+The **Prompt-Native Application** format was developed to bridge the gap between static literature and active cognitive engagement. While Large Language Models (LLMs) provide the reasoning engine, authors and educators lack a standardized, portable method to distribute "interactive exercises" and "structured curriculums" that travel with their content.
 
-This repository establishes a **Publisher-Agnostic Standard** for bundling what are essentially a "cognitive cartridge" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
+This repository establishes a **Publisher-Agnostic Standard** for bundling what is essentially a "cognitive cartridge" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
 
 ## Prior Art & Acknowledgments
 The PNA standard stands on the shoulders of recent innovation in "Structured Context" engineering. We gratefully acknowledge and align with the following architectural precedents:
@@ -19,12 +19,12 @@ While the above standards focus on *Enterprise Automation*, the PNA Standard foc
 ## Who is this for?
 * **Authors:** Include a `book_companion.json` alongside your ebook or course that lets readers chat with the book, leverage tools (e.g. prompts) from the text, and explore the book's insights more deeply.
 * **Corporate Trainers:** Distribute "Scenario Simulators" for sales objection handling, leadership role-play, or AI adoption workflows without needing a Learning Management System (LMS).
-* **University Educators:** Share a "Socratic Tutor" file that forces the AI to ask students questions rather than giving answers.
+* **University Educators:** Share a "Socratic Tutor" file that forces the AI to ask students questions rather than giving answers, complete with grading rubrics and syllabus tracking.
 
 ## Use Case Examples
-* **The Interactive Book:** Instead of a static digital file, the reader receives an executable file. This allows them to not only read the theory from a book but immediately run the frameworks and tools found in the book with their own data within the an AI chat session. It transforms the author from a narrator into an active consultant.
-* **The Living Corporate Playbook:** An organization evolves its static 50-page "Strategy PDF" or "Employee Handbook" with a PNA. Employees can query the document for specific answers ("What is our policy on AI usage?") or run specific workflows ("Help me draft a project brief using our Q3 Strategic Pillars") ensuring strict alignment with leadership’s intent. The "cognitive cartridge" also helps reduce risk by keeping the content inside one easily distributed file.
-* **The Intelligent Course Syllabus:** An educator packages their entire semester’s curriculum—readings, assignments, and grading rubrics—into a single file. The file acts as a 24/7 tutor that can quiz students on specific chapters, guide them through homework assignments using the educator’s specific methodology, and provide feedback before they submit their work. The "walled-garden" also helps focus the students on the curriculum while learning to effectively use AI.
+* **The Interactive Book:** Instead of a static digital file, the reader receives an executable file. This allows them to not only read the theory from a book but immediately run the frameworks and tools found in the book with their own data within the an AI chat session.
+* **The Living Corporate Playbook:** An organization evolves its static 50-page "Strategy PDF" or "Employee Handbook" with a PNA. Employees can query the document for specific answers ("What is our policy on AI usage?") or run specific workflows ("Help me draft a project brief using our Q3 Strategic Pillars") ensuring strict alignment with leadership’s intent.
+* **The Intelligent Course Syllabus:** An educator packages their entire semester’s curriculum—readings, assignments, and grading rubrics—into a single file. The file acts as a 24/7 tutor that can quiz students on specific chapters, guide them through homework assignments using the educator’s specific methodology, and provide feedback before they submit their work.
 
 ## Origin & Backstory
 The **Prompt-Native Application** standard was originally developed to publish a single book *Agile Symbiosis: When AI Dissolves Your Job, Design a Better One*, by Michael Janzen. It's a guide for knowledge workers adapting to the Age of AI Synthesis.
@@ -35,7 +35,12 @@ Once that architecture was stable, Michael reverse-engineered the code into this
 
 ## Architecture
 
-The PNA standard utilizes a **Monolithic Context Architecture (MCA)**. Unlike traditional software that relies on a complex stack of databases and servers, a PNA bundles the Logic (Tools), Content (Knowledge Base), and Interface (Menu System) into a single, portable JSON file.
+The PNA standard utilizes a **Monolithic Context Architecture (MCA)**. Unlike traditional software that relies on a complex stack of databases and servers, a PNA bundles the Data, Logic, and Interface into a single unit:
+
+1.  **Logic** (Tools & Formatting Rules)
+2.  **Pedagogy** (Curriculum Tracks & Rubrics)
+3.  **Content** (Knowledge Base / Manuscript)
+4.  **Interface** (Navigation Menu)
 
 Technically, this is a form of Bootstrapped CAG (Cache-Augmented Generation).
 * **Traditional RAG:** Searches for relevant pages in a database and sends only those pages to the AI.
@@ -65,9 +70,6 @@ In extremely long sessions, models sometimes prioritize information at the very 
 **Ephemeral State:**
 The "State Machine" is simulated within the chat session. If the user closes the chat window or starts a new thread, the "OS" shuts down and all user data is lost. It does not have a persistent database.
 
-**Hallucination Risk:**
-While the standard uses a "Walled Garden" instruction block to forbid outside knowledge, the underlying model can still occasionally hallucinate facts if the user explicitly pushes it off-rails.
-
 ## 🤖 Compatibility
 
 This standard creates a generic JSON file (`.json`) compatible with major LLMs.
@@ -87,12 +89,12 @@ You can build a PNA in two ways. Choose the path that fits your workflow.
 
 ### Path 1: The Automated Way (Recommended)
 Use the **Replit Agent** to build the file for you using the AI code tools at Replit.com. You upload your manuscript, and the AI Architect interviews you, writes the code, and assembles the JSON file.
-* **Best for:** Speed, non-coders, and standard books.
+* **Best for:** Speed, non-coders, and standard books **or graded courses**.
 * **Start Here:** [**Automated Build Guide**](GUIDE-REPLIT.md)
 
 ### Path 2: The Manual Way
 Build the file yourself using the "Surgical Swap" method. You generate components one by one using standard AI chats (ChatGPT/Claude) and paste them into a template.
-* **Best for:** Precision, privacy (no uploading to Replit), or complex custom structures.
+* **Best for:** Precision, privacy (no uploading to Replit), or complex custom structures **(like multi-track syllabi)**.
 * **Start Here:** [**Manual Build Guide**](GUIDE.md)
 
 ## License
