@@ -1,4 +1,4 @@
-# The Generator Prompt (v2.1)
+# The Generator Prompt (v2.0)
 
 **Use this prompt to turn your raw chapter text into a code block.**
 
