@@ -56,3 +56,16 @@ You will now convert your book chapters into "Code Blocks."
 2. Start a new chat and paste the prompt.
 3. Attach your full `my-book-app.json` file.
 4. The AI will check for syntax errors and (if applicable) verify that your Course Syllabus links to valid chapters.
+
+---
+
+## Appendix: Upgrading a Legacy File (v1.0 to v2.0)
+If you already have a working PNA file (v1.0) and want to add the Course/Curriculum layer without rebuilding the whole file:
+
+1.  Open **Prompt 6 (`06-upgrade-v1-to-v2.md`)**.
+2.  Paste the prompt into an AI chat and attach your existing `.json` file.
+3.  The AI will analyze your content and draft the new `curriculum_tracks` block and an updated `system_boot`.
+4.  **The Surgical Insert:**
+    * Find the `standard_navigation` block in your file.
+    * Paste the new `curriculum_tracks` block directly **after** it (and before `content_modules`).
+    * *Remember to add a comma after the navigation block if one is missing!*
