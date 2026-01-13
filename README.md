@@ -85,7 +85,7 @@ This standard creates a generic JSON file (`.json`) compatible with major LLMs.
 
 ## Getting Started
 
-You can build a PNA in two ways. Choose the path that fits your workflow.
+You can build a PNA in three ways. Choose the path that fits your workflow.
 
 ### Path 1: The Automated Way (Recommended)
 Use the **Replit Agent** to build the file for you using the AI code tools at Replit.com. You upload your manuscript, and the AI Architect interviews you, writes the code, and assembles the JSON file.
@@ -96,6 +96,11 @@ Use the **Replit Agent** to build the file for you using the AI code tools at Re
 Build the file yourself using the "Surgical Swap" method. You generate components one by one using standard AI chats (ChatGPT/Claude) and paste them into a template.
 * **Best for:** Precision, privacy (no uploading to Replit), or complex custom structures **(like multi-track syllabi)**.
 * **Start Here:** [**Manual Build Guide**](GUIDE.md)
+
+### Path 3: The Upgrade Path
+Already have a v1.0 file? Use the Migration Assistant to analyze your existing book and generate the Curriculum layer without rebuilding your content.
+* **Best for:** Updating existing libraries or public domain texts.
+* **Start Here:** Use Prompt `06-upgrade-v1-to-v2.md` (See Appendix in the Manual Guide).
 
 ## License
 This standard is released under the **MIT License**. You are free to build commercial PNAs using this format.
