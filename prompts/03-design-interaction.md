@@ -1,4 +1,4 @@
-# The Interaction Designer Prompt (v2.1)
+# The Interaction Designer Prompt (v2.0)
 
 **Use this prompt to program the UX, Navigation, and Personality of your AI.**
 
