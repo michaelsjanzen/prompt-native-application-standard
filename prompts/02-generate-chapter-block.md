@@ -1,16 +1,16 @@
-# The Generator Prompt
+# The Generator Prompt (v2.1)
 
-**Use this prompt to turn your raw chapter text into a code block.** 
+**Use this prompt to turn your raw chapter text into a code block.**
 
 ## Beware Context Window Limitations
-1. **Use Gemini**, for large books, this is currently the AI with the largest context window. 
-2. **Chunk the work,** and provide the original text one chapter at a time.
-3. **Start new sessions,** if you see the AI getting stuck, you just hit it's limit.
+1. **Use Gemini 1.5 Pro or Claude 3.5 Sonnet**: For large books, these are the only models reliable enough for full-chapter transcription.
+2. **Chunk the work:** Provide the original text one chapter at a time.
+3. **Start new sessions:** If you see the AI getting stuck or hallucinating, you likely hit its limit. Start a fresh chat.
 
 ## Prompt and Instructions
-1. **Copy and paste** the prompt text below into a the same chat.
+1. **Copy and paste** the prompt text below into the same chat.
 2. **Wait** for the AI to ask for your text.
-3. **Open** the `my-book-app.json` file (created by the Architect) in a text editor so you are ready to swap in the content.
+3. **Open** your `my-book-app.json` file in a text editor so you are ready to swap in the content.
 
 ***
 
@@ -18,28 +18,31 @@
 I am building a Prompt-Native Application (PNA) using the 'Surgical Swap' method. I have a JSON skeleton, and now I need to generate the code blocks for the content.
 
 **Your Goal:**
-Convert the manuscript text I provide into a clean JSON object. Reproduce the content verbatim, so that the provided content is perfectly preserved without any loss.
+Convert the manuscript text I provide into a clean JSON object. Reproduce the content verbatim.
 
 **Instructions:**
-1. Ask me which **Section ID** this is for (e.g., `preface`, `forward`, `introduction`, `chapter_1`, `chapter_2`, `chapter_etc`, `afterword`, `appendix`, `biliography`).
-2. Ask me to paste or attach the **Text Content** if I have not already made that available.
-3. If the content for a content block I provide is very large, you may need to chunk the text into sub-sections and break the content block into separate chunks. If this happens, tell me if I need to do anything differently.
-4. Add line breaks /n/n to the content where you see paragraphs breaks in the source content.
-5. Generate the JSON block strictly following the schema below, but do not add additional enclosing brackets since this is a block of JSON code, not a complete JSON file.
-6. If you believe this is the very last section of the content source, ask the me if this is true and STOP and wait for my response.
-7. If this is the last section, do not include the comma at the end of the block to prevent JSON errors.
-8. Include an explanation informating me that to maintain proper file syntax that final comma should be omitted.
-9. Also inform me to look carefully through the file for line breaks, and explain why these will break the file.
+1. Ask me which **Section ID** this is for.
+   * *Critical for Course Builders:* If I am using the `course-companion-template`, warn me that this ID must EXACTLY match the ID listed in my `curriculum_tracks` (e.g., if the syllabus says `chapter_1`, I must use `chapter_1` here, not `ch1`).
+2. Ask me to paste or attach the **Text Content**.
+3. **Verbatim Fidelity:**
+   * Do not summarize.
+   * If the text includes "Exercises," "Questions," or "Action Items" at the end, INLCUDE them fully. Do not truncate them.
+4. **Formatting:**
+   * Add `\n\n` for line breaks.
+   * Escape all double quotes (`"`) inside the text.
+5. Generate the JSON block strictly following the schema below.
+6. **The Comma Rule:**
+   * If this is NOT the last chapter, end the block with a comma (`,`).
+   * If this IS the last chapter, DO NOT include a comma (to prevent JSON syntax errors).
 
 **Required JSON Structure:**
 "SECTION_ID_HERE": {
   "title": "EXTRACT_TITLE_FROM_TEXT",
   "content": "ESCAPED_TEXT_CONTENT_HERE",
-  "interaction_type": "standard",
+  "interaction_type": "standard", // Use 'worksheet' if this is purely a form/quiz
   "key_concepts": [
     "concept 1",
     "concept 2",
     "concept 3"
   ]
 },
-```
