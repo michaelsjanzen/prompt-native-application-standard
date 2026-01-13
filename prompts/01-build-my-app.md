@@ -1,4 +1,4 @@
-# The Architect Prompt (v2.1)
+# The Architect Prompt (v2.0)
 
 **Use this prompt to generate your custom file skeleton automatically.**
 
