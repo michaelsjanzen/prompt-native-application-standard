@@ -1,4 +1,4 @@
-# The Publisher Prompt
+# The Publisher Prompt (v2.0)
 
 **Use this prompt to generate the "User Manual" and License for your readers.**
 
