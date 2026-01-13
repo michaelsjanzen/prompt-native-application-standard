@@ -1,4 +1,4 @@
-# How to Manually Build a Prompt-Native Application (PNA) 
+# How to Manually Build a Prompt-Native Application (PNA)
 **(The "Surgical Swap" Method)**
 
 Building a Prompt-Native Application (PNA) is like snapping together building blocks. You don't need to write code; you just need to swap out the generic blocks for your specific content.
@@ -7,71 +7,52 @@ Building a Prompt-Native Application (PNA) is like snapping together building bl
 
 ### Why do we build it in pieces?
 You might be tempted to ask the AI to "Just generate the whole app for my 50,000-word book at once." **Do not do this.**
-1.  **The "Output Limit" Trap:** While AIs can *read* massive books (Input), they can only *write* a small amount of code at a time (Output). If you try to do it all at once, the code will cut off in the middle, breaking your file.
-2.  **The "Black Box" Problem:** If the AI writes the whole thing, you won't know how it works. By pasting the blocks yourself, you learn the structure. This is crucial for when you want to tweak the navigation or edit a menu later.
+1.  **The "Output Limit" Trap:** AIs can *read* massive books (Input), but can only *write* a small amount of code at a time (Output).
+2.  **The "Black Box" Problem:** By pasting the blocks yourself, you learn the structure. This is crucial for debugging later.
 
 ## Pro Tips for Success
 
 **1. Use a Code Editor, NOT a Word Processor**
-* **Do not** use Microsoft Word, Google Docs, or Notepad to edit your JSON file. They often add "Smart Quotes" (curly quotes) which break code.
-* **Recommended:** Download [VS Code](https://code.visualstudio.com/) (Free) or use Sublime Text. These editors highlight errors (like missing commas) in red so you can fix them instantly.
+* **Do not** use Microsoft Word.
+* **Recommended:** Download [VS Code](https://code.visualstudio.com/) (Free) or use Sublime Text.
 
-**2. Save Versions (The "Save As" Habit)**
-* You will be manually pasting large blocks of text. It is easy to accidentally delete a bracket.
-* Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`. If you break v3, you can go back to v2.
-* Continue to save new versions for each step in the editing process and occasionally provide the AI the recent version. The new file names also help the AI from mistaking the latest version from old cached versions.
+**2. Save Versions**
+* Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`.
 
-### 3. Know Your AI Limits (Context Windows)
-*(Note: Specs reflect the State of the Art as of January 2026. AI models evolve rapidly, so always check your specific model's current limits.)*
-
-* **Gemini 1.5 Pro (2 Million Tokens):** The largest capacity by far. It can hold approximately 1.5 million words (roughly 10–15 full novels) in a single conversation without forgetting details.
-* **Claude 3.5 Sonnet (200k Tokens):** Sufficient for single full manuscripts. It comfortably handles one long novel (up to ~150,000 words) along with your editing instructions.
-* **ChatGPT / GPT-4o (128k Tokens):** **Warning: Too small for a full novel.** Since a 100,000-word book equals roughly 135,000 tokens, it will not fit in a single prompt. You must split the text into chapters or use summaries for this model.
-  
 ---
 
 ## Phase 1: Create the Skeleton
-1. Open the file `templates/book-companion-template.json`.
-2. Copy the entire content.
-3. Paste it into a text editor (Notepad, TextEdit, BBEdit, VS Code). **Do not use Word.**
+1. **Choose your Template:** Navigate to the `templates/` folder in this repository.
+    * **Option A (`book-companion-template.json`):** Use this for a standard reference book (Simple).
+    * **Option B (`course-companion-template.json`):** Use this if you want to create a graded course with a syllabus (Advanced).
+2. Copy the entire content of your chosen template.
+3. Paste it into your text editor.
 4. Save it as `my-book-app.json`.
 
-You will see blocks that look like this:
-```json
-"chapter_1": {
-  "_INSTRUCTION": "SELECT THIS ENTIRE BLOCK (from { to }) AND REPLACE",
-  "status": "EMPTY_PLACEHOLDER"
-},
-```
+## Phase 2: The Architect Interview
+1. Open **Prompt 1 (`01-build-my-app.md`)**.
+2. Start a chat with the AI (Claude/Gemini) and paste the prompt.
+3. Attach your manuscript AND your chosen template.
+4. The AI will interview you about your strategy (e.g., "Do you want a Drill Sergeant Persona?").
+5. **The Output:** The AI will give you a "Skeleton" code block (Meta + System Boot). Replace the top half of your file with this new code.
 
-## Phase 2: The Generator Loop
-You will now use an AI (ChatGPT, Claude, etc.) to convert your book chapters into "Code Blocks."
-1. Copy the Prompt: Go to prompts/02-generate-chapter-block.md in this repository and copy the text.
-2. Paste into AI: Start a new chat with your preferred AI and paste the prompt.
-3. Input Text: When asked, paste the text of your chapter.
-4. Copy Output: The AI will give you a code block. Copy it.
+## Phase 3: The Generator Loop (Content)
+You will now convert your book chapters into "Code Blocks."
+1. Open **Prompt 2 (`02-generate-chapter-block.md`)**.
+2. **Important:** If you are building a Course, check your Syllabus in the Skeleton first. If the syllabus says `"read": ["chapter_1"]`, you MUST tell the AI to generate the ID as `chapter_1`.
+3. Paste the prompt into a new AI chat.
+4. Paste your chapter text.
+5. Copy the resulting JSON block.
 
-##  Phase 3: The Surgical Swap
-This is the only technical part. You must replace the Placeholder with the New Block.
+## Phase 4: The Surgical Swap
 1. In your text editor, highlight the ENTIRE placeholder block for Chapter 1.
-  * Start highlighting at: The opening { (curly brace).
-  * Stop highlighting at: The closing } (curly brace).
 2. Paste the code block you got from the AI.
+3. **The Comma Rule:**
+    * If a chapter follows this one, ensure there is a comma after the closing curly brace `},`
+    * If this is the LAST chapter, ensure there is NO comma `}`
 
-## The "Comma Danger" Zone
-JSON is very strict about commas.
-* If you are pasting a block in the MIDDLE of the list: It usually needs a comma after the closing },
-* If you are pasting the LAST block: It must NOT have a comma after the closing }
-
-Visual Check:
-JSON
-"chapter_1": { ... },  <-- COMMA HERE because Chapter 2 follows
-"chapter_2": { ... }   <-- NO COMMA because it is the last item
-
-## Phase 4: Validation (The Safety Net)
-Before you share your file, you must check for bugs.
-1. Copy your entire my-book-app.json file.
-2. Open a new chat with an AI.
-3. Paste the prompt from prompts/03-validate-my-code.md.
-4. Paste your code.
-5. If the AI says "Valid JSON," you are done! If it finds errors, it will give you a fixed version to copy.
+## Phase 5: Validation (The Safety Net)
+1. Open **Prompt 4 (`04-validate-my-code.md`)**.
+2. Start a new chat and paste the prompt.
+3. Attach your full `my-book-app.json` file.
+4. The AI will check for syntax errors and (if applicable) verify that your Course Syllabus links to valid chapters.
