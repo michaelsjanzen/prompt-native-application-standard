@@ -1,4 +1,4 @@
-# The Validator Prompt (v2.1)
+# The Validator Prompt (v2.0)
 
 **Use this prompt to check your file for errors before publishing.**
 
