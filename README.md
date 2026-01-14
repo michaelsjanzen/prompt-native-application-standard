@@ -7,17 +7,17 @@ The **Prompt-Native Application (PNA)** format standardizes the shift from **Sta
 
 While Large Language Models (LLMs) provide the reasoning engine, authors and educators have lacked a standardized, portable method to distribute "interactive exercises" and "structured curriculums" that travel with their content.
 
-This repository establishes a **Publisher-Agnostic Standard** for bundling what the community calls a "cognitive cartridge" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
+This repository establishes a **Publisher-Agnostic Standard** for bundling what the community calls a "**Cognitive Cartridge**" (JSON file) with books, courses, and training materials. It allows a reader to upload a single file and instantly transform a generic AI chat into an interactive book, specialized tutor, simulator, or diagnostic tool specific to the author's methodology.
 
 ## Prior Art & Acknowledgments
-The PNA Standard is not a new invention; it is the productization of a powerful technique pioneered by the AI "System Architect" community. We explicitly acknowledge and stand on the shoulders of the following lineages:
+The PNA Standard is not a new invention; it is the productization of specific "Context Engineering" techniques. We explicitly acknowledge and stand on the shoulders of the following lineages:
 
-* **The "Boot Kernel" & "Warcore" Communities:** We credit the "Power User" communities and open-source forums of late 2025, who first established the utility of JSON-based "Operating Systems" and the "Game Cartridge" metaphor for LLMs.
+* **Microsoft Declarative Agents & OpenAI System Fingerprints:** We credit the enterprise architects who pioneered the concept of "System Instructions" as a control layer, validating the need for structured constraints in generative AI.
 * **The "Active Document" Theorists:** We align with the theory that the future of information is executable—transforming the author from a narrator into an active consultant.
-* **Microsoft Declarative Agents & OpenAI System Fingerprints:** For pioneering the concept of "System Instructions" as a control layer.
+* **The "System Architect" & "Context Engineering" Communities:** We credit the open-source experimenters who first established the utility of JSON-based "Operating Systems" and the "Cognitive Cartridge" metaphor for LLMs, proving that static files can effectively govern dynamic AI behavior.
 
 **Differentiation:**
-While "Warcores" focused on modular aggression and high-speed execution for power users, the PNA Standard adapts this powerful "Walled Garden" architecture specifically for **Long-Form Publishing** and **Pedagogical Alignment**. We have taken the "Warcore" chassis and refitted it for the classroom and the boardroom.
+While early "System Architect" experiments focused on modular execution for power users, the PNA Standard adapts this powerful "Walled Garden" architecture specifically for **Long-Form Publishing** and **Pedagogical Alignment**. We have taken the "Context Injection" chassis and refitted it for the classroom and the boardroom.
 
 ## Who is this for?
 * **Authors:** Include a `book_companion.json` alongside your ebook.
