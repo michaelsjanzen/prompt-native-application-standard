@@ -5,7 +5,7 @@ You are about to build an **Active Document**.
 
 Unlike a static PDF, a PNA is a file that processes information *for* the reader. This guide uses the "Surgical Swap" method—you don't need to write code; you just need to swap out generic blocks for your specific content.
 
-**Historical Context:** This method is adapted from the "System Architect" workflows used to build "Warcores" and "Boot Kernels." We are applying those robust architectural principles to create educational and publishing tools.
+**Historical Context:** This method is adapted from the "System Architect" and "Context Engineering" workflows used to build high-performance agent personas. We are applying those robust architectural principles to create educational and publishing tools.
 
 **IMPORTANT:** Never press "Enter" twice inside a text block in the code. Empty lines break the file. Let the AI handle the formatting for you.
 
