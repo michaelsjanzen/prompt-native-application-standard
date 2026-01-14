@@ -4,7 +4,7 @@
 
 A Prompt-Native Application (PNA) is a single, portable text file built on **Monolithic Context Architecture**. It bundles Content (a manuscript), Logic (executable tools), and Interface (navigation menus) into a self-contained package.
 
-**Note on Technology:** This automated builder leverages the "Context Injection" techniques pioneered by the "Boot Kernel" community to create a "Walled Garden" for your content.
+**Note on Technology:** This automated builder leverages the "Context Injection" techniques pioneered by the "System Architect" community to create a "Walled Garden" for your content.
 
 ### THE SHORT VERSION:
 1.  Drag & Drop your manuscript and the instructions file into Replit.
