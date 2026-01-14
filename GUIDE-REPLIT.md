@@ -38,3 +38,23 @@ Do not act as a web developer. Read the attached replit-agent-instructions.md fi
 Your goal is to generate Data Files (JSON), not an Application.
 
 Please confirm you have read the instructions and are ready to begin Phase 1.
+```
+## STEP 3: WHAT HAPPENS NEXT?
+
+Once you hit Enter, the AI takes over. You do not need to manage the process; just follow the Agent's lead.
+
+Here is the v2.0 workflow the Agent will guide you through:
+
+1.  **The Analysis:** The Agent will read your book and scan for "Pedagogy" (Homework, Quizzes, Exercises).
+2.  **The Critical Choice:** The Agent will ask you: **"Do you want to build a Standard Companion (Reference) or an Active Course (Graded)?"**
+    * *Standard:* Best for simple Q&A with the book.
+    * *Course:* Creates a Syllabus, Grading Rubric, and Assignments.
+3.  **The Build:** The Agent will generate the files (`meta.json`, `system_boot.json`, and `curriculum.json` if needed).
+4.  **The Review:** Finally, the Agent will show you a simple "Review Console" where you can inspect your JSON file before downloading.
+
+---
+
+## Troubleshooting:
+
+* **If the Agent tries to build a website/app immediately:** Tell it: "STOP. Read the `replit-agent-instructions.md` file again. You are building Data Files, not a Web App."
+* **If the Agent forgets to create the Course:** Remind it: "Check Phase 2 of your instructions. I requested the Course Strategy."
