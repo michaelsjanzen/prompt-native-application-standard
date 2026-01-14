@@ -12,7 +12,7 @@ This repository establishes a **Publisher-Agnostic Standard** for bundling what 
 ## Prior Art & Acknowledgments
 The PNA Standard is not a new invention; it is the productization of a powerful technique pioneered by the AI "System Architect" community. We explicitly acknowledge and stand on the shoulders of the following lineages:
 
-* **The "Boot Kernel" & "Warcore" Communities:** We credit the "Power User" communities (specifically the architectures explored by users like *Tall-Region8329* in late 2025), who first established the utility of JSON-based "Operating Systems" and the "Game Cartridge" metaphor for LLMs.
+* **The "Boot Kernel" & "Warcore" Communities:** We credit the "Power User" communities and open-source forums of late 2025, who first established the utility of JSON-based "Operating Systems" and the "Game Cartridge" metaphor for LLMs.
 * **The "Active Document" Theorists:** We align with the theory that the future of information is executable—transforming the author from a narrator into an active consultant.
 * **Microsoft Declarative Agents & OpenAI System Fingerprints:** For pioneering the concept of "System Instructions" as a control layer.
 
