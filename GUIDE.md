@@ -23,6 +23,10 @@ You might be tempted to ask the AI to "Just generate the whole app for my 50,000
 **2. Save Versions**
 * Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`.
 
+**3. The "Intelligent Pagination" Rule**
+* **Problem:** If a user asks the AI to "Read Chapter 1," and Chapter 1 is 5,000 words long, the AI will often cut off mid-sentence.
+* **Solution:** In your instructions (or `library` tools), always add this rule: *"If text is long, proactively split it. Render Part 1, then STOP and ask the user if they want to proceed to Part 2."*
+
 ---
 
 ## Phase 1: Create the Skeleton
@@ -33,12 +37,13 @@ You might be tempted to ask the AI to "Just generate the whole app for my 50,000
 3.  Paste it into your text editor.
 4.  Save it as `my-book-app.json`.
 
-## Phase 2: The Architect Interview
+## Phase 2: The Architect Interview (System Boot)
 1.  Open **Prompt 1 (`01-build-my-app.md`)**.
 2.  Start a chat with the AI (Claude/Gemini) and paste the prompt.
 3.  Attach your manuscript AND your chosen template.
 4.  The AI will interview you about your strategy.
-5.  **The Output:** The AI will give you a "Skeleton" code block (Meta + System Boot). Replace the top half of your file with this new code.
+5.  **The Output:** The AI will give you a "Skeleton" code block (`meta` + `system_boot`). Replace the top half of your file with this new code.
+    * *Tip: This is where you define your "Persona" (e.g., "Strict Tutor" or "Helpful Librarian").*
 
 ## Phase 3: The Generator Loop (Content)
 You will now convert your book chapters into "Code Blocks."
@@ -46,7 +51,22 @@ You will now convert your book chapters into "Code Blocks."
 2.  **Important:** If you are building a Course, check your Syllabus in the Skeleton first.
 3.  Paste the prompt into a new AI chat.
 4.  Paste your chapter text.
-5.  Copy the resulting JSON block.
+5.  Copy the resulting JSON block and paste it into `content_modules`.
+
+## Phase 3.5: The Logic Layer (Building the Library)
+**This is the differentiator.** This step turns your file from a "Book" into an "App."
+The `library` object contains your **Tools**—the specific commands users can run.
+
+**Examples of Tools:**
+* `[REVIEW]`: Forces the AI to act as an impartial critic to review the book.
+* `[APPLY]`: Takes a framework from Chapter 3 and applies it to the user's messy notes.
+* `[QUIZ]`: Generates a scenario based on Chapter 5 and grades the user's response.
+
+**How to Build Them:**
+1.  Identify the 3-5 "Killer Apps" from your book (e.g., A Calculator, A Strategy Generator, A Diagnostic).
+2.  Ask the AI: *"Write a JSON object for a tool called 'The Strategy Generator' that uses the rules from Chapter 4 to fix a user's problem."*
+3.  Paste these objects into the `library` section of your JSON.
+4.  *Advanced:* You can add `next_steps` to each tool to guide the user after the tool runs.
 
 ## Phase 4: The Surgical Swap
 1.  In your text editor, highlight the ENTIRE placeholder block for Chapter 1.
