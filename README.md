@@ -16,9 +16,6 @@ The PNA Standard is not a new invention; it is the productization of specific "C
 * **The "Active Document" Theorists:** We align with the theory that the future of information is executable—transforming the author from a narrator into an active consultant.
 * **The "System Architect" & "Context Engineering" Communities:** We credit the open-source experimenters who first established the utility of JSON-based "Operating Systems" and the "Cognitive Cartridge" metaphor for LLMs, proving that static files can effectively govern dynamic AI behavior.
 
-**Differentiation:**
-While early "System Architect" experiments focused on modular execution for power users, the PNA Standard adapts this powerful "Walled Garden" architecture specifically for **Long-Form Publishing** and **Pedagogical Alignment**. We have taken the "Context Injection" chassis and refitted it for the classroom and the boardroom.
-
 ## Who is this for?
 * **Authors:** Include a `book_companion.json` alongside your ebook.
 * **Corporate Trainers:** Distribute "Scenario Simulators" for sales objection handling or leadership role-play without needing a Learning Management System (LMS).
@@ -29,14 +26,14 @@ While early "System Architect" experiments focused on modular execution for powe
 * **The Living Corporate Playbook:** A PNA replaces the static "Employee Handbook." Employees can query the document ("What is our policy on AI usage?") or run workflows ("Draft a project brief using our Q3 Strategic Pillars"), ensuring alignment with leadership’s intent.
 * **The Intelligent Course Syllabus:** An educator packages their entire curriculum—readings, assignments, and rubrics—into a single file. The file acts as a 24/7 TA that quizzes students and guides them through homework using the educator’s specific methodology.
 
-## Architecture
+## Architecture: Monolithic Context Architecture (MCA)
 
-The PNA standard utilizes a **Monolithic Context Architecture (MCA)**. Unlike traditional software that relies on a complex stack of databases, a PNA bundles the Data, Logic, and Interface into a single unit:
+The PNA standard utilizes a **Monolithic Context Architecture (MCA)**. Unlike traditional software that relies on a complex stack of databases, a PNA bundles four distinct layers into a single file:
 
-1.  **Logic** (Tools & Formatting Rules)
-2.  **Pedagogy** (Curriculum Tracks & Rubrics)
-3.  **Content** (Knowledge Base / Manuscript)
-4.  **Interface** (Navigation Menu)
+1.  **The Kernel (System Boot):** Defines the Persona, boundaries, and formatting rules.
+2.  **The Logic (Library):** Contains the executable tools, prompts, and calculators users can run (e.g., `[REVIEW]`, `[QUIZ]`, `[APPLY]`).
+3.  **The Pedagogy (Curriculum):** Defines the learning tracks, grading rubrics, and assignments (Optional).
+4.  **The Content (Knowledge Base):** The full manuscript or course material.
 
 Technically, this is a form of **Bootstrapped CAG (Cache-Augmented Generation)**.
 * **Traditional RAG:** Searches for relevant pages in a database ("Disk").
@@ -58,9 +55,6 @@ This standard requires an LLM with a large context window (128k+ tokens). As of 
 
 **The "Lost in the Middle" Phenomenon:**
 In extremely long sessions, models may prioritize information at the beginning (System Prompt) and the end (Latest Query). *Mitigation: The PNA standard includes "re-grounding" instructions in every tool.*
-
-**Ephemeral State:**
-The "State Machine" is simulated within the chat session. If the user closes the chat window, the "OS" shuts down.
 
 ## 🤖 Compatibility
 
