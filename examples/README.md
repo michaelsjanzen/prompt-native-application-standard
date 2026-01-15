@@ -9,7 +9,7 @@ All examples in this directory are derived from **Public Domain** works (publish
 
 ## How to Use These Files
 1. **Download** the `.json` file you want to explore (e.g., `homer-the-odyssey.json`).
-2. **Upload** the file to an LLM of your choice (ChatGPT, Claude, Gemini, etc.).
+2. **Upload** the file to an LLM of your choice (Gemini, Claude, ChatGPT, etc.).
 3. **Prompt** the AI: *"run"*
 4. **Interact:** The AI will adopt the specific persona and navigation rules defined in the file.
 
