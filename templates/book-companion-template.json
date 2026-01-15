@@ -24,9 +24,9 @@
   "standard_navigation": {
     "_NOTE": "The LLM will append this to every output.",
     "options": [
-      { "key": "M", "label": "Main Menu", "action": "return_to_root" },
-      { "key": "N", "label": "Next Section", "action": "advance_sequential" },
-      { "key": "?", "label": "Quiz Me", "action": "trigger_random_question" }
+      { "key": [M]", "label": "Main Menu", "action": "return_to_root" },
+      { "key": "[N]", "label": "Next Section", "action": "advance_sequential" },
+      { "key": "[?]", "label": "Quiz Me", "action": "trigger_random_question" }
     ]
   },
   "content_modules": {
