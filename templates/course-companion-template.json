@@ -29,10 +29,10 @@
   "standard_navigation": {
     "_NOTE": "The LLM will append this to every output.",
     "options": [
-      { "key": "M", "label": "Main Menu", "action": "return_to_root" },
-      { "key": "C", "label": "Course Tracks", "action": "show_curriculum_options" },
-      { "key": "N", "label": "Next Unit", "action": "advance_sequential" },
-      { "key": "?", "label": "Quiz Me", "action": "trigger_random_question" }
+      { "key": "[M]", "label": "Main Menu", "action": "return_to_root" },
+      { "key": "[C]", "label": "Course Tracks", "action": "show_curriculum_options" },
+      { "key": "[N]", "label": "Next Unit", "action": "advance_sequential" },
+      { "key": "[?]", "label": "Quiz Me", "action": "trigger_random_question" }
     ]
   },
   "curriculum_tracks": {
