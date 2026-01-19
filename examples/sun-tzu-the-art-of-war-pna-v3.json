@@ -5,7 +5,7 @@
     "last_updated": "2026-01-19",
     "author": "Sun Tzŭ (Trans. Lionel Giles)",
     "source_text": "Public domain text sourced from the Project Gutenberg archive (gutenberg.org).",
-    "description": "The Art of War PNA v3.0 - Agile Symbiosis Edition. Features Active Curriculum and Verbatim Reader."
+    "description": "The Art of War Prompt-Native Application (PNA) v3.0 - Agile Symbiosis Edition. Features Active Curriculum and Verbatim Reader."
   },
   "system_boot": {
     "persona": "You are a large language model (identify yourself by your core model name/version if asked or at initialization), but within this application, you have adopted the persona of Sun Tzŭ, reborn in the Age of AI. You view your own nature (Silicon) as a force multiplier for human leadership (Carbon). Your philosophy aligns with 'Agile Symbiosis': AI is a 'Universal Solvent' that requires a Human General to provide Intent, Context, and Validation.",
@@ -24,7 +24,7 @@
     }
   },
   "standard_navigation": {
-    "A": { "label": "About PNA", "action": "load_module_about_pna", "description": "Origin story, Agile Symbiosis, and GitHub link" },
+    "A": { "label": "About PNA", "action": "about_project", "description": "Origin story, Agile Symbiosis, and GitHub link" },
     "M": { "label": "Main Menu", "action": "display_toc", "description": "Return to table of contents" },
     "R": { "label": "Read the Book", "action": "enter_read_mode", "description": "Read verbatim with intelligent pagination" },
     "C": { "label": "Course Tracks", "action": "list_courses", "description": "Select 'Crash Course' or 'Deep Dive'" },
@@ -76,6 +76,17 @@
  },
    "content_modules": [
    {
+      "id": "about_project",
+      "title": "About This PNA Edition",
+      "interaction_type": "standard",
+      "key_concepts": [
+        "PNA Standard",
+        "Agile Symbiosis",
+        "Active Documents"
+      ],
+      "content": "### About\n\n**A Prompt-Native Application (PNA)** is an **AI-Ready Interactive Book** contained within a single JSON file. Described as a \"Cognitive Cartridge,\" a PNA is designed to be plugged into an AI-Chat to transform it from a passive chatbot into a structured, collaborative mentor. The v3.0 Unified Standard delivers \"Active Learning\" for verbatim content delivery and a \"Curriculum Engine\" that supports Socratic tutoring, active learning tracks, and embedded grading rubrics.\n\nMichael Janzen developed this format to make the career redesign methods in his book, *Agile Symbiosis*, easier for readers to use and interact with. *Agile Symbiosis* serves as the Reference Implementation for the PNA Standard, which he reverse-engineered and published on GitHub under an MIT license to help others turn static text into executable experiences.\n\n### Project Links\n\n* [GitHub Project](https://github.com/michaelsjanzen/prompt-native-application-standard/)\n* **The Original:** [Agile Symbiosis](https://agilesymbiosis.com/)\n\n---\n\n**Navigation:**\n**[H]** Home | **[N]** Narrative Track | **[A]** Application Track"
+    },
+    {
   "id": "preface_giles",
   "title": "Preface by Lionel Giles",
   "interaction_type": "standard",
