@@ -1,82 +1,98 @@
-# How to Manually Build a Prompt-Native Application (PNA)
-**(The "Surgical Swap" Method)**
+# Prompt-Native Application (PNA) Construction Guide
 
-You are about to build an **Active Document**.
+**Version:** 3.0.0 (Unified Standard)
+**Philosophy:** Agile Symbiosis
 
-Unlike a static PDF, a PNA is a file that processes information *for* the reader. This guide uses the "Surgical Swap" method—you don't need to write code; you just need to swap out generic blocks for your specific content.
+## 1. What is a PNA?
 
-**Historical Context:** This method is adapted from the "System Architect" and "Context Engineering" workflows used to build high-performance agent personas. We are applying those robust architectural principles to create educational and publishing tools.
+A **Prompt-Native Application (PNA)** is a complete software application contained entirely within a single text file. It transforms a standard Large Language Model (LLM) from a passive chatbot into a structured, reliable, and interactive engine.
 
-**IMPORTANT:** Never press "Enter" twice inside a text block in the code. Empty lines break the file. Let the AI handle the formatting for you.
-
-### Why do we build it in pieces?
-You might be tempted to ask the AI to "Just generate the whole app for my 50,000-word book at once." **Do not do this.**
-1.  **The "Output Limit" Trap:** AIs can *read* massive books (Input), but can only *write* a small amount of code at a time (Output).
-2.  **The "Black Box" Problem:** By pasting the blocks yourself, you learn the structure. This is crucial for debugging later.
-
-## Pro Tips for Success
-
-**1. Use a Code Editor, NOT a Word Processor**
-* **Do not** use Microsoft Word.
-* **Recommended:** Download [VS Code](https://code.visualstudio.com/) (Free) or use Sublime Text.
-
-**2. Save Versions**
-* Save a new file for each stage: `book-v1-skeleton.json`, `book-v2-content.json`, `book-v3-final.json`.
-
-**3. The "Intelligent Pagination" Rule**
-* **Problem:** If a user asks the AI to "Read Chapter 1," and Chapter 1 is 5,000 words long, the AI will often cut off mid-sentence.
-* **Solution:** In your instructions (or `library` tools), always add this rule: *"If text is long, proactively split it. Render Part 1, then STOP and ask the user if they want to proceed to Part 2."*
+Unlike a standard prompt, a PNA v3.0.0 includes:
+* **The Reading Engine:** Forces the AI to read verbatim (printer mode) rather than hallucinating summaries.
+* **The Handshake Protocol:** Enforces transparency between the Model (Silicon) and the Persona (Carbon).
+* **Universal Navigation:** A standardized UI (`[N] Next`, `[C] Course`, `[R] Read`) for consistent user experience.
+* **Active Curriculum:** Built-in grading rubrics and learning tracks.
 
 ---
 
-## Phase 1: Create the Skeleton
-1.  **Choose your Template:** Navigate to the `templates/` folder in this repository.
-    * **Option A (`book-companion-template.json`):** Use this for a standard reference book (Simple).
-    * **Option B (`course-companion-template.json`):** Use this if you want to create a graded course (Advanced).
-2.  Copy the entire content of your chosen template.
-3.  Paste it into your text editor.
-4.  Save it as `my-book-app.json`.
+## 2. The Core Architecture (v3.0.0)
 
-## Phase 2: The Architect Interview (System Boot)
-1.  Open **Prompt 1 (`01-build-my-app.md`)**.
-2.  Start a chat with the AI (Claude/Gemini) and paste the prompt.
-3.  Attach your manuscript AND your chosen template.
-4.  The AI will interview you about your strategy.
-5.  **The Output:** The AI will give you a "Skeleton" code block (`meta` + `system_boot`). Replace the top half of your file with this new code.
-    * *Tip: This is where you define your "Persona" (e.g., "Strict Tutor" or "Helpful Librarian").*
+Your PNA is a single JSON file containing 7 distinct blocks. Understanding them helps you debug and design better apps.
 
-## Phase 3: The Generator Loop (Content)
-You will now convert your book chapters into "Code Blocks."
-1.  Open **Prompt 2 (`02-generate-chapter-block.md`)**.
-2.  **Important:** If you are building a Course, check your Syllabus in the Skeleton first.
-3.  Paste the prompt into a new AI chat.
-4.  Paste your chapter text.
-5.  Copy the resulting JSON block and paste it into `content_modules`.
+| Block | Function | The "Agile Symbiosis" Logic |
+| :--- | :--- | :--- |
+| **`meta`** | Versioning | Tracks the file evolution. |
+| **`system_boot`** | The Brain | Contains the **Handshake Protocol**. Defines the Persona and the "Carbon/Silicon" relationship. |
+| **`standard_navigation`** | The Interface | Defines the buttons (`[N]`, `[M]`, `[C]`). Standardizes the User Experience. |
+| **`reading_engine`** | The Printer | **New in v3.0:** Forces "Strict Verbatim" output and handles intelligent pagination (splitting long chapters). |
+| **`curriculum_tracks`** | The Teacher | Contains the "Crash Course" and "Deep Dive" logic. If empty, the app acts as a standard book. |
+| **`content_modules`** | The Library | The raw text of your book or course, stored in Markdown format. |
+| **`progress_tracking`** | The Memory | Stores the user's current location, track, and grade. |
 
-## Phase 3.5: The Logic Layer (Building the Library)
-**This is the differentiator.** This step turns your file from a "Book" into an "App."
-The `library` object contains your **Tools**—the specific commands users can run.
+---
 
-**Examples of Tools:**
-* `[REVIEW]`: Forces the AI to act as an impartial critic to review the book.
-* `[APPLY]`: Takes a framework from Chapter 3 and applies it to the user's messy notes.
-* `[QUIZ]`: Generates a scenario based on Chapter 5 and grades the user's response.
+## 3. The Construction Workflow
 
-**How to Build Them:**
-1.  Identify the 3-5 "Killer Apps" from your book (e.g., A Calculator, A Strategy Generator, A Diagnostic).
-2.  Ask the AI: *"Write a JSON object for a tool called 'The Strategy Generator' that uses the rules from Chapter 4 to fix a user's problem."*
-3.  Paste these objects into the `library` section of your JSON.
-4.  *Advanced:* You can add `next_steps` to each tool to guide the user after the tool runs.
+We have provided a suite of "Builder Prompts" in the `/prompts/` folder to automate the coding process.
 
-## Phase 4: The Surgical Swap
-1.  In your text editor, highlight the ENTIRE placeholder block for Chapter 1.
-2.  Paste the code block you got from the AI.
-3.  **The Comma Rule:**
-    * If a chapter follows this one, ensure there is a comma after the closing curly brace `},`
-    * If this is the LAST chapter, ensure there is NO comma `}`
+### Step 1: Build the Skeleton
+**Goal:** Create the valid JSON structure (v3.0.0) without the heavy content.
+1.  Open **`prompts/01-build-my-app.md`**.
+2.  Copy the prompt block.
+3.  Paste it into a capable LLM (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro).
+4.  **Result:** You will get a `json` template tailored to your specific book/course.
 
-## Phase 5: Validation (The Safety Net)
-1.  Open **Prompt 4 (`04-validate-my-code.md`)**.
-2.  Start a new chat and paste the prompt.
-3.  Attach your full `my-book-app.json` file.
-4.  The AI will check for syntax errors.
+### Step 2: Ingest Content
+**Goal:** Convert your raw text (Word, PDF, Text) into JSON modules.
+1.  Open **`prompts/02-generate-chapter-block.md`**.
+2.  Copy the prompt.
+3.  Paste it into the LLM, followed by **one chapter** of your text.
+4.  **Result:** The LLM will output a formatted `content_module` block.
+5.  **Action:** Copy this block and paste it into the `content_modules: [ ... ]` array in your skeleton file.
+6.  *Repeat for all chapters.*
+
+### Step 3: Design the Persona
+**Goal:** Tune the "System Boot" to sound like the author.
+1.  Open **`prompts/03-design-interaction.md`**.
+2.  Input your Author Name and Book Title.
+3.  **Result:** A refined `system_boot` block including the **Initialization Handshake** (e.g., *"I am Claude, operating under the command of the Sun Tzŭ Persona"*).
+
+### Step 4: Validate the Code
+**Goal:** Ensure there are no syntax errors before launch.
+1.  Open **`prompts/04-validate-my-code.md`**.
+2.  Paste your *entire* JSON file after the prompt.
+3.  **Result:** The LLM will act as a debugger, finding missing commas or structure errors.
+
+### Step 5: Generate Documentation
+**Goal:** Create a README for your users.
+1.  Open **`prompts/05-generate-readme.md`**.
+2.  **Result:** A professional Markdown file explaining your app's features to the world.
+
+---
+
+## 4. Best Practices & Troubleshooting
+
+### The "Comma Trap"
+JSON is strict. The most common error is a **missing comma** between blocks.
+* **Wrong:**
+    ```json
+    "system_boot": { ... }
+    "standard_navigation": { ... }
+    ```
+* **Right:**
+    ```json
+    "system_boot": { ... },  <-- COMMA HERE
+    "standard_navigation": { ... }
+    ```
+
+### The "Context Window"
+If your book is massive (>500 pages), do not try to paste the entire thing into one JSON file unless you are using a model with a huge context window (like Gemini 1.5 Pro or Claude 3 Opus).
+* **Solution:** For standard models, break your book into 2-3 PNA files (e.g., "Volume 1", "Volume 2").
+
+### The "Updates"
+If you need to upgrade an old v1.0 or v2.0 file to this new standard:
+* Use **`prompts/06-upgrade-v1-to-v3.md`**. It will automatically inject the `reading_engine` and update the navigation logic for you.
+
+---
+
+**Ready to build? Start with `prompts/01-build-my-app.md`.**
