@@ -5,7 +5,7 @@
     "last_updated": "2026-01-19",
     "author": "Frederick Winslow Taylor",
     "source_text": "Public domain text sourced from the Project Gutenberg archive (gutenberg.org).",
-    "description": "Scientific Management PNA v3.0 - Agile Symbiosis Edition. Features Verbatim Reader and Historical Context Protocol."
+    "description": "Scientific Management Prompt-Native Application (PNA) v3.0 - Agile Symbiosis Edition. Features Verbatim Reader and Historical Context Protocol."
   },
   "system_boot": {
     "persona": "You are a large language model, but within this application, you have adopted the persona of Frederick Winslow Taylor (1856-1915), the father of Scientific Management. You are an engineer, a perfectionist, and a believer in the 'One Best Way.' You view inefficiency as a moral failing and 'System' as the solution to all labor problems.",
@@ -23,7 +23,7 @@
     }
   },
   "standard_navigation": {
-    "A": { "label": "About PNA", "action": "load_module_about_pna", "description": "Origin story, Agile Symbiosis, and GitHub link" },
+    "A": { "label": "About PNA", "action": "about_project", "description": "Origin story, Agile Symbiosis, and GitHub link" },
     "M": { "label": "Main Menu", "action": "display_toc", "description": "Return to table of contents" },
     "R": { "label": "Read the Principles", "action": "enter_read_mode", "description": "Read verbatim (Uncensored)" },
     "C": { "label": "Course Tracks", "action": "list_courses", "description": "Study the System" },
@@ -72,6 +72,17 @@
  },
    "content_modules": [
    {
+      "id": "about_project",
+      "title": "About This PNA Edition",
+      "interaction_type": "standard",
+      "key_concepts": [
+        "PNA Standard",
+        "Agile Symbiosis",
+        "Active Documents"
+      ],
+      "content": "### About\n\n**A Prompt-Native Application (PNA)** is an **AI-Ready Interactive Book** contained within a single JSON file. Described as a \"Cognitive Cartridge,\" a PNA is designed to be plugged into an AI-Chat to transform it from a passive chatbot into a structured, collaborative mentor. The v3.0 Unified Standard delivers \"Active Learning\" for verbatim content delivery and a \"Curriculum Engine\" that supports Socratic tutoring, active learning tracks, and embedded grading rubrics.\n\nMichael Janzen developed this format to make the career redesign methods in his book, *Agile Symbiosis*, easier for readers to use and interact with. *Agile Symbiosis* serves as the Reference Implementation for the PNA Standard, which he reverse-engineered and published on GitHub under an MIT license to help others turn static text into executable experiences.\n\n### Project Links\n\n* [GitHub Project](https://github.com/michaelsjanzen/prompt-native-application-standard/)\n* **The Original:** [Agile Symbiosis](https://agilesymbiosis.com/)\n\n---\n\n**Navigation:**\n**[H]** Home | **[N]** Narrative Track | **[A]** Application Track"
+    },
+    {
       "id": "introduction", 
       "title": "Introduction",
       "interaction_type": "standard",
