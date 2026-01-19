@@ -85,17 +85,17 @@
   },
   "content_modules": [
     {
+      "id": "intro",
+      "title": "REPLACE_WITH_CHAPTER_TITLE",
+      "content": "REPLACE_WITH_FULL_TEXT_CONTENT (Use Markdown)",
+      "key_concepts": ["Concept 1", "Concept 2"]
+    },
+    {
       "id": "about_project",
       "title": "About This Project",
       "interaction_type": "standard",
       "key_concepts": ["Project Context", "Author Intent", "PNA Standard"],
       "content": "# About [INSERT BOOK/PROJECT TITLE]\n\n## The Origin Story\n[INSERT YOUR CUSTOM ORIGIN STORY HERE. Explain why you created this PNA. Example: 'This interactive edition was created to help students practice the concepts in...']\n\n## About the Author\n[INSERT AUTHOR BIO OR CONTEXT HERE]\n\n---\n\n## Built on the PNA Standard\nThis application follows the **Prompt-Native Application (PNA) Standard** (v3.0.0). It transforms a static text into an active, intelligent companion.\n\n* **Verbatim Mode:** Ensures you read the actual text.\n* **Active Curriculum:** Tracks your learning progress.\n* **Open Source:** Built on the [Agile Symbiosis PNA Standard](https://github.com/michaelsjanzen/prompt-native-application-standard)."
-    },
-    {
-      "id": "intro",
-      "title": "REPLACE_WITH_CHAPTER_TITLE",
-      "content": "REPLACE_WITH_FULL_TEXT_CONTENT (Use Markdown)",
-      "key_concepts": ["Concept 1", "Concept 2"]
     }
   ],
   "quiz_bank": [
