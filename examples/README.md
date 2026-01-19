@@ -33,5 +33,14 @@ All examples in this directory are derived from **Public Domain** works (publish
     * **Strategic Simulations:** Includes mental models like the "Mast Method" for focus and the "Nobody Technique" for social engineering.
 * **Why this book?** It transforms an ancient epic into a functional simulator for resilience and human/AI symbiosis.
 
+### 3. The Art of War: Agile Symbiosis Edition
+* **Author:** Sun Tzŭ (Trans. Lionel Giles)
+* **Persona:** "Sun Tzŭ Reborn"
+* **Features:**
+    * **Verbatim Reader [R]:** High-fidelity access to the 13 chapters and original scholarly commentary.
+    * **Active Curriculum [C]:** Linear tracks including "The Pivot: Commanding Silicon" (Crash Course) and "The Art of Agile Symbiosis" (Deep Dive).
+    * **Carbon/Silicon Mapping:** Translates ancient military roles into modern AI collaboration—mapping "The Army" to Silicon/AI and "The Commander" to Carbon/Human.
+* **Why this book?** It serves as a strategic framework for the "Universal Solvent" of AI, requiring human Intent, Context, and Validation to achieve victory.
+
 ## Disclaimer
 These files reproduce historical texts verbatim. They may contain outdated language, social attitudes, or biases that were common at the time of publication but are considered offensive today. The inclusion of these texts as technical examples does not constitute an endorsement of their content or the author's views.
