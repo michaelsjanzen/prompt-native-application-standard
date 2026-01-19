@@ -36,11 +36,14 @@ The actual prompts you paste into an LLM to build your app.
 * `02-generate-chapter-block.md` - Converts raw text to JSON modules.
 * `03-design-interaction.md` - Creates the Persona and Handshake.
 * `04-validate-my-code.md` - Debugs your file.
+* `05-generate-readme.md` - Build a README.
+* `06-upgrade-v1-v2-to-v3.md` - Upgrade from older versions.
 
 ### `/examples/` (Case Studies)
 Reference implementations to see the standard in action.
-* `tzu-the-art-of-war.json` - **The Gold Standard.** A fully upgraded v3.0.0 PNA featuring the "Agile Symbiosis" persona.
-* `agile-symbiosis-os.json` - The reference operating system.
+* `sun-tzu-the-art-of-war-pna-v3.json` 
+* `homer-the-odyssey-pna-v3.json` 
+* `taylor-scientific-management-pna-v3.json` 
 
 ### `/templates/`
 * `pna-v3-unified-template.json` - The blank master file for starting from scratch.
@@ -52,7 +55,7 @@ Traditional software requires a stack: Database, Backend, Frontend, Hosting.
 A **PNA** requires zero infrastructure. It "lives" inside the context window of the AI session.
 
 **The Philosophy: Agile Symbiosis**
-We believe AI should not replace human judgment ("Carbon") but act as a force multiplier ("Silicon"). This standard is designed to give the Human General strict command over the Silicon Army.
+We believe AI should not replace human judgment ("Carbon") but act as a force multiplier ("Silicon"). 
 
 ---
 
