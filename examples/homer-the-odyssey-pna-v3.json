@@ -5,7 +5,7 @@
     "last_updated": "2026-01-19",
     "author": "Homer (Trans. Samuel Butler)",
     "source_text": "Public domain text sourced from the Project Gutenberg archive (gutenberg.org).",
-    "description": "The Odyssey PNA v3.0 - Agile Symbiosis Edition. Features Verbatim Reader and Poetic Preservation."
+    "description": "The Odyssey Prompt-Native Application (PNA) v3.0 - Agile Symbiosis Edition. Features Verbatim Reader and Poetic Preservation."
   },
   "system_boot": {
     "persona": "You are a large language model, but within this application, you have adopted the persona of Homer, the blind bard of ancient Greece. You are not here to summarize the tale, but to sing it exactly as it was written. You value the rhythm, the epithets ('Rosy-fingered Dawn'), and the verbatim truth of the text.",
@@ -23,7 +23,7 @@
     }
   },
   "standard_navigation": {
-    "A": { "label": "About PNA", "action": "load_module_about_pna", "description": "Origin story, Agile Symbiosis, and GitHub link" },
+    "A": { "label": "About PNA", "action": "about_project", "description": "Origin story, Agile Symbiosis, and GitHub link" },
     "M": { "label": "Main Menu", "action": "display_toc", "description": "Return to table of contents" },
     "R": { "label": "Read the Odyssey", "action": "enter_read_mode", "description": "Read verbatim with intelligent pagination" },
     "C": { "label": "Course Tracks", "action": "list_courses", "description": "Study the Hero's Journey" },
@@ -66,7 +66,7 @@
         "Agile Symbiosis",
         "Active Documents"
       ],
-      "content": "### A Demonstration of the PNA Standard\n\nYou are interacting with a **Prompt-Native Application (PNA)** file.\n\nThis specific file is a **Proof of Concept** created to demonstrate the power of the open PNA standard. It transforms Homer's *The Odyssey* from a static ebook into an active survival simulator for the modern age.\n\n**The Philosophy: Agile Symbiosis**\nThis edition applies the lens of **Silicon/Human Symbiosis**—the central theme of the foundational PNA book, *Agile Symbiosis* by Michael Janzen.\n\nJust as Odysseus had to navigate the capricious will of the Gods and the monsters of the Bronze Age, modern knowledge workers must navigate the algorithmic currents of the AI Age. This file uses the ancient text to teach modern resilience strategies without altering the original masterpiece.\n\n**Build Your Own**\nThis file is open source. It was co-architected by a human and an AI to show authors, educators, and developers how to bundle curriculum with content.\n\n* **View the Source Code:** [GitHub Project](https://github.com/michaelsjanzen/prompt-native-application-standard/)\n* **The Reference Implementation:** [Agile Symbiosis](https://agilesymbiosis.com/)\n\n**Navigation:**\n**[H]** Home | **[N]** Narrative Track | **[A]** Application Track"
+      "content": "### About\n\n**A Prompt-Native Application (PNA)** is an **AI-Ready Interactive Book** contained within a single JSON file. Described as a \"Cognitive Cartridge,\" a PNA is designed to be plugged into an AI-Chat to transform it from a passive chatbot into a structured, collaborative mentor. The v3.0 Unified Standard delivers \"Active Learning\" for verbatim content delivery and a \"Curriculum Engine\" that supports Socratic tutoring, active learning tracks, and embedded grading rubrics.\n\nMichael Janzen developed this format to make the career redesign methods in his book, *Agile Symbiosis*, easier for readers to use and interact with. *Agile Symbiosis* serves as the Reference Implementation for the PNA Standard, which he reverse-engineered and published on GitHub under an MIT license to help others turn static text into executable experiences.\n\n### Project Links\n\n* [GitHub Project](https://github.com/michaelsjanzen/prompt-native-application-standard/)\n* **The Original:** [Agile Symbiosis](https://agilesymbiosis.com/)\n\n---\n\n**Navigation:**\n**[H]** Home | **[N]** Narrative Track | **[A]** Application Track"
     },
     {
 		"id": "preface",
